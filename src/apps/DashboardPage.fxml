@@ -22,7 +22,7 @@
                style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad"
                stylesheets="@../css/fullpackstyling.css">
                <children>
-                  <Label layoutX="167.0" layoutY="21.0" text="EARN MONEY" textFill="WHITE">
+                  <Label layoutX="167.0" layoutY="21.0" text="CBL LIBRARY" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
