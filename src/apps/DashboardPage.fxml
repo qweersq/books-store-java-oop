@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -9,16 +10,18 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ScrollPane?>
 
-<AnchorPane style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/10.0.1"
-   xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.Dashboard">
+
+<AnchorPane style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.Dashboard">
    <children>
       <AnchorPane prefHeight="616.0" prefWidth="993.0"
          style="-fx-background-color: #030307; -fx-background-radius: 15;">
          <children>
-            <Pane layoutX="590.0" layoutY="-1.0" prefHeight="93.0" prefWidth="405.0"
+            <!-- <Pane layoutX="590.0" layoutY="-1.0" prefHeight="93.0" prefWidth="405.0"
                style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad"
                stylesheets="@../css/fullpackstyling.css">
                <children>
@@ -28,7 +31,7 @@
                      </font>
                   </Label>
                </children>
-            </Pane>
+            </Pane> -->
             <VBox prefHeight="544.0" prefWidth="74.0"
                style="-fx-background-color: #131022; -fx-background-radius: 15 0 0 15;"
                AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -61,7 +64,7 @@
                   </Button>
                </children>
             </VBox>
-            <AnchorPane layoutX="91.0" layoutY="69.0" prefHeight="531.0" prefWidth="886.0"
+            <AnchorPane layoutX="91.0" layoutY="30.0" prefHeight="551.0" prefWidth="886.0"
                style="-fx-background-color: #131022; -fx-background-radius: 10;"
                stylesheets="@../css/fullpackstyling.css">
                <children>
@@ -75,23 +78,66 @@
                         <Font size="26.0" />
                      </font>
                   </Label>
-                  <Label layoutX="39.0" layoutY="81.0"
+                  <HBox alignment="CENTER_LEFT" layoutX="0" layoutY="78.0" prefHeight="42.0" prefWidth="812.0" spacing="80.0" style="-fx-background-color: #131022;">
+                     <children>
+                        <Label text="Id" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Customer Name" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Books Name" layoutX="100"  textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Quantity" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Date" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Total" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ScrollPane layoutX="14.0" layoutY="132.0" prefHeight="320.0" prefWidth="846.0" stylesheets="@fullpackstyling.css">
+                     <content>
+                        <VBox fx:id="pnItems" prefHeight="318.0" prefWidth="844.0" spacing="5.0" style="-fx-background-color: #131022;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <!-- <Label layoutX="39.0" layoutY="81.0"
                      text="The most sophisticated and efficient way of buying gold" textFill="WHITE">
                      <font>
                         <Font size="13.0" />
                      </font>
-                  </Label>
-                  <Label layoutX="39.0" layoutY="144.0"
+                  </Label> -->
+                  <!-- <Label layoutX="39.0" layoutY="144.0"
                      text="Select options in order to find the best offer" textFill="#9a9292">
                      <font>
                         <Font size="13.0" />
                      </font>
-                  </Label>
-                  <ComboBox layoutX="39.0" layoutY="186.0" prefHeight="29.0" prefWidth="155.0"
+                  </Label> -->
+                  <!-- <ComboBox layoutX="39.0" layoutY="186.0" prefHeight="29.0" prefWidth="155.0"
                      styleClass="combo-box" stylesheets="@../css/fullpackstyling.css" />
                   <ComboBox layoutX="229.0" layoutY="186.0" prefHeight="29.0" prefWidth="179.0"
-                     styleClass="combo-box" stylesheets="@../css/fullpackstyling.css" />
-                  <Pane layoutX="39.0" layoutY="324.0" prefHeight="66.0" prefWidth="472.0"
+                     styleClass="combo-box" stylesheets="@../css/fullpackstyling.css" /> -->
+                  <!-- <Pane layoutX="39.0" layoutY="324.0" prefHeight="66.0" prefWidth="472.0"
                      style="-fx-background-color: #1A172A; -fx-background-radius: 10;">
                      <children>
                         <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0"
@@ -113,8 +159,8 @@
                            </font>
                         </Label>
                      </children>
-                  </Pane>
-                  <Pane layoutX="39.0" layoutY="414.0" prefHeight="66.0" prefWidth="472.0"
+                  </Pane> -->
+                  <!-- <Pane layoutX="39.0" layoutY="414.0" prefHeight="66.0" prefWidth="472.0"
                      style="-fx-background-color: #1A172A; -fx-background-radius: 10;">
                      <children>
                         <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="14.0" layoutY="19.0"
@@ -136,8 +182,8 @@
                            </font>
                         </Label>
                      </children>
-                  </Pane>
-                  <Pane layoutX="569.0" layoutY="46.0" prefHeight="297.0" prefWidth="270.0"
+                  </Pane> -->
+                  <!-- <Pane layoutX="569.0" layoutY="46.0" prefHeight="297.0" prefWidth="270.0"
                      style="-fx-background-radius: 20;" styleClass="linear-grad"
                      stylesheets="@../css/fullpackstyling.css">
                      <children>
@@ -173,8 +219,8 @@
                            </image>
                         </ImageView>
                      </children>
-                  </Pane>
-                  <Line endX="100.0" layoutX="445.0" layoutY="54.0" startX="100.0" startY="418.0"
+                  </Pane> -->
+                  <!-- <Line endX="100.0" layoutX="445.0" layoutY="54.0" startX="100.0" startY="418.0"
                      stroke="#b9b1b1" strokeDashOffset="2.0" />
                   <Label layoutX="569.0" layoutY="377.0" text="What is wow " textFill="WHITE">
                      <font>
@@ -196,8 +242,8 @@
                            </font>
                         </Label>
                      </top>
-                  </BorderPane>
-                  <Pane layoutX="39.0" layoutY="241.0" prefHeight="66.0" prefWidth="472.0"
+                  </BorderPane> -->
+                  <!-- <Pane layoutX="39.0" layoutY="241.0" prefHeight="66.0" prefWidth="472.0"
                      style="-fx-background-color: #1A172A; -fx-background-radius: 10;">
                      <children>
                         <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0"
@@ -219,7 +265,7 @@
                            </font>
                         </Label>
                      </children>
-                  </Pane>
+                  </Pane> -->
                </children>
             </AnchorPane>
          </children>
