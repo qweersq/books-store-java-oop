@@ -68,12 +68,12 @@
                style="-fx-background-color: #131022; -fx-background-radius: 10;"
                stylesheets="@../css/fullpackstyling.css">
                <children>
-                  <Label layoutX="36.0" layoutY="34.0" text="CBL" textFill="WHITE">
+                  <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#fff600" >
                      <font>
                         <Font size="26.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="34.0" text="ECOMMERSE" textFill="#fff600">
+                  <Label layoutX="170.0" layoutY="34.0" text="ECOMMERSE" textFill="WHITE">
                      <font>
                         <Font size="26.0" />
                      </font>
@@ -112,7 +112,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <ScrollPane layoutX="14.0" layoutY="132.0" prefHeight="320.0" prefWidth="846.0" stylesheets="@fullpackstyling.css">
+                  <ScrollPane layoutX="14.0" layoutY="132.0" prefHeight="320.0" prefWidth="846.0" stylesheets="@../css/fullpackstyling.css">
                      <content>
                         <VBox fx:id="pnItems" prefHeight="318.0" prefWidth="844.0" spacing="5.0" style="-fx-background-color: #131022;">
                            <padding>
@@ -121,6 +121,10 @@
                         </VBox>
                      </content>
                   </ScrollPane>
+                  <Button fx:id="btnEdit" layoutX="600" layoutY="480.0" alignment="CENTER" styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100" textFill="#fefe" stylesheets="@../css/fullpackstyling.css" text="Edit">
+                  </Button>
+                  <Button fx:id="btnDelete" layoutX="730" layoutY="480.0" alignment="CENTER" styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100" textFill="#fefe" stylesheets="@../css/fullpackstyling.css" text="Edit">
+                  </Button>
                   <!-- <Label layoutX="39.0" layoutY="81.0"
                      text="The most sophisticated and efficient way of buying gold" textFill="WHITE">
                      <font>
