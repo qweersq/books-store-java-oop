@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -53,7 +54,7 @@
                         <Insets />
                     </HBox.margin>
                 </Label>
-                <Label text="Date" textFill="#e7e5e5">
+                <Label text="Price" textFill="#e7e5e5">
                     <HBox.margin>
                         <Insets />
                     </HBox.margin>
@@ -76,6 +77,7 @@
                 </VBox>
             </content>
         </ScrollPane>
+        <TextField fx:id="inputText" styleClass="inputid" prefWidth="70" prefHeight="40"  layoutX="500" layoutY="480.0" promptText="Enter Id" />
         <Button fx:id="btnEdit" layoutX="600" layoutY="480.0" alignment="CENTER"
             styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0"
             prefWidth="100" textFill="#fefe" stylesheets="@../css/fullpackstyling.css" text="Edit">
