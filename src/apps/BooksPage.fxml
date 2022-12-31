@@ -77,7 +77,7 @@
       </Button>
       <Button fx:id="btnDelete" layoutX="730" layoutY="480.0" alignment="CENTER"
          styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0"
-         prefWidth="100" textFill="#fefe" stylesheets="@../css/fullpackstyling.css" text="Edit">
+         prefWidth="100" textFill="#fefe" stylesheets="@../css/fullpackstyling.css" text="Hapus">
       </Button>
    </children>
 </AnchorPane>
