@@ -18,7 +18,7 @@
 <AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="551.0" prefWidth="886.0"
     style="-fx-background-color: #131022; -fx-background-radius: 10;"
     stylesheets="@../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1"
-    fx:controller="apps.Controller">
+    fx:controller="apps.DashboardController">
     <children>
         <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#fff600">
             <font>
@@ -82,7 +82,7 @@
         </Button>
         <Button fx:id="btnDelete" layoutX="730" layoutY="480.0" alignment="CENTER"
             styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0"
-            prefWidth="100" textFill="#fefe" stylesheets="@../css/fullpackstyling.css" text="Edit">
+            prefWidth="100" textFill="#fefe" stylesheets="@../css/fullpackstyling.css" text="Delete">
         </Button>
         <!-- <Label layoutX="39.0" layoutY="81.0"
                      text="The most sophisticated
