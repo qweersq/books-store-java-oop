@@ -15,264 +15,243 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.control.ScrollPane?>
 
-
-<AnchorPane style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.Dashboard">
-   <children>
-      <AnchorPane prefHeight="616.0" prefWidth="993.0"
-         style="-fx-background-color: #030307; -fx-background-radius: 15;">
-         <children>
-            <!-- <Pane layoutX="590.0" layoutY="-1.0" prefHeight="93.0" prefWidth="405.0"
-               style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad"
-               stylesheets="@../css/fullpackstyling.css">
-               <children>
-                  <Label layoutX="167.0" layoutY="21.0" text="CBL LIBRARY" textFill="WHITE">
+<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="551.0" prefWidth="886.0"
+    style="-fx-background-color: #131022; -fx-background-radius: 10;"
+    stylesheets="@../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="apps.Controller">
+    <children>
+        <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#fff600">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+        <Label layoutX="170.0" layoutY="34.0" text="ECOMMERSE" textFill="WHITE">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER_LEFT" layoutX="0" layoutY="78.0" prefHeight="42.0" prefWidth="812.0"
+            spacing="80.0" style="-fx-background-color: #131022;">
+            <children>
+                <Label text="Id" textFill="#e7e5e5">
+                    <HBox.margin>
+                        <Insets left="50.0" />
+                    </HBox.margin>
+                </Label>
+                <Label text="Customer Name" textFill="#e7e5e5">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+                <Label text="Books Name" layoutX="100" textFill="#e7e5e5">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+                <Label text="Quantity" textFill="#e7e5e5">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+                <Label text="Date" textFill="#e7e5e5">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+                <Label text="Total" textFill="#e7e5e5">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+        <ScrollPane layoutX="14.0" layoutY="132.0" prefHeight="320.0" prefWidth="846.0"
+            stylesheets="@../css/fullpackstyling.css">
+            <content>
+                <VBox fx:id="pnItems" prefHeight="318.0" prefWidth="844.0" spacing="5.0"
+                    style="-fx-background-color: #131022;">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </VBox>
+            </content>
+        </ScrollPane>
+        <Button fx:id="btnEdit" layoutX="600" layoutY="480.0" alignment="CENTER"
+            styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0"
+            prefWidth="100" textFill="#fefe" stylesheets="@../css/fullpackstyling.css" text="Edit">
+        </Button>
+        <Button fx:id="btnDelete" layoutX="730" layoutY="480.0" alignment="CENTER"
+            styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0"
+            prefWidth="100" textFill="#fefe" stylesheets="@../css/fullpackstyling.css" text="Edit">
+        </Button>
+        <!-- <Label layoutX="39.0" layoutY="81.0"
+                     text="The most sophisticated
+        and efficient way of buying gold" textFill="WHITE">
                      <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane> -->
-            <VBox prefHeight="544.0" prefWidth="74.0"
-               style="-fx-background-color: #131022; -fx-background-radius: 15 0 0 15;"
-               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Pane prefHeight="79.0" prefWidth="74.0"
-                     style="-fx-background-radius: 15 0 15 15;" />
-                  <Button fx:id="btnDashboard" contentDisplay="TOP" mnemonicParsing="false"
-                     prefHeight="66.0" prefWidth="74.0" styleClass="button3"
-                     stylesheets="@../css/fullpackstyling.css" text="Dashboard" textFill="#a868a0">
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true"
-                           preserveRatio="true">
-                           <image>
-                              <Image url="@../resources/cat.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="btnBooks" contentDisplay="TOP" layoutX="10.0" layoutY="10.0"
-                     mnemonicParsing="false" prefHeight="66.0" prefWidth="74.0" styleClass="button3"
-                     stylesheets="@../css/fullpackstyling.css" text="Books" textFill="#a868a0">
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true"
-                           preserveRatio="true">
-                           <image>
-                              <Image url="@../resources/time.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </VBox>
-            <AnchorPane layoutX="91.0" layoutY="30.0" prefHeight="551.0" prefWidth="886.0"
-               style="-fx-background-color: #131022; -fx-background-radius: 10;"
-               stylesheets="@../css/fullpackstyling.css">
-               <children>
-                  <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#fff600" >
-                     <font>
-                        <Font size="26.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="170.0" layoutY="34.0" text="ECOMMERSE" textFill="WHITE">
-                     <font>
-                        <Font size="26.0" />
-                     </font>
-                  </Label>
-                  <HBox alignment="CENTER_LEFT" layoutX="0" layoutY="78.0" prefHeight="42.0" prefWidth="812.0" spacing="80.0" style="-fx-background-color: #131022;">
-                     <children>
-                        <Label text="Id" textFill="#e7e5e5">
-                           <HBox.margin>
-                              <Insets left="50.0" />
-                           </HBox.margin>
-                        </Label>
-                        <Label text="Customer Name" textFill="#e7e5e5">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                        <Label text="Books Name" layoutX="100"  textFill="#e7e5e5">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                        <Label text="Quantity" textFill="#e7e5e5">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                        <Label text="Date" textFill="#e7e5e5">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                        <Label text="Total" textFill="#e7e5e5">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <ScrollPane layoutX="14.0" layoutY="132.0" prefHeight="320.0" prefWidth="846.0" stylesheets="@../css/fullpackstyling.css">
-                     <content>
-                        <VBox fx:id="pnItems" prefHeight="318.0" prefWidth="844.0" spacing="5.0" style="-fx-background-color: #131022;">
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                        </VBox>
-                     </content>
-                  </ScrollPane>
-                  <Button fx:id="btnEdit" layoutX="600" layoutY="480.0" alignment="CENTER" styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100" textFill="#fefe" stylesheets="@../css/fullpackstyling.css" text="Edit">
-                  </Button>
-                  <Button fx:id="btnDelete" layoutX="730" layoutY="480.0" alignment="CENTER" styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100" textFill="#fefe" stylesheets="@../css/fullpackstyling.css" text="Edit">
-                  </Button>
-                  <!-- <Label layoutX="39.0" layoutY="81.0"
-                     text="The most sophisticated and efficient way of buying gold" textFill="WHITE">
-                     <font>
-                        <Font size="13.0" />
+                        <Font
+        size="13.0" />
                      </font>
                   </Label> -->
-                  <!-- <Label layoutX="39.0" layoutY="144.0"
-                     text="Select options in order to find the best offer" textFill="#9a9292">
+        <!-- <Label layoutX="39.0" layoutY="144.0"
+                     text="Select options in
+        order to find the best offer" textFill="#9a9292">
                      <font>
-                        <Font size="13.0" />
+                        <Font
+        size="13.0" />
                      </font>
                   </Label> -->
-                  <!-- <ComboBox layoutX="39.0" layoutY="186.0" prefHeight="29.0" prefWidth="155.0"
-                     styleClass="combo-box" stylesheets="@../css/fullpackstyling.css" />
-                  <ComboBox layoutX="229.0" layoutY="186.0" prefHeight="29.0" prefWidth="179.0"
-                     styleClass="combo-box" stylesheets="@../css/fullpackstyling.css" /> -->
-                  <!-- <Pane layoutX="39.0" layoutY="324.0" prefHeight="66.0" prefWidth="472.0"
-                     style="-fx-background-color: #1A172A; -fx-background-radius: 10;">
+        <!-- <ComboBox layoutX="39.0" layoutY="186.0" prefHeight="29.0" prefWidth="155.0"
+        styleClass="combo-box" stylesheets="@../css/fullpackstyling.css" />
+                  <ComboBox
+        layoutX="229.0" layoutY="186.0" prefHeight="29.0" prefWidth="179.0"
+                     styleClass="combo-box"
+        stylesheets="@../css/fullpackstyling.css" /> -->
+        <!-- <Pane layoutX="39.0" layoutY="324.0" prefHeight="66.0" prefWidth="472.0"
+        style="-fx-background-color: #1A172A; -fx-background-radius: 10;">
                      <children>
-                        <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0"
-                           pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0"
+        pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/eruro.png" />
+                              <Image
+        url="@../resources/eruro.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="58.0" layoutY="14.0" text="QUANTITY TIPS:"
+        <Label layoutX="58.0" layoutY="14.0" text="QUANTITY TIPS:"
                            textFill="#41951c">
-                           <font>
+        <font>
                               <Font size="14.0" />
                            </font>
-                        </Label>
+        </Label>
                         <Label layoutX="58.0" layoutY="34.0"
-                           text="Save 0.03 per gold if you buy more 100 more gold" textFill="WHITE">
+                           text="Save
+        0.03 per gold if you buy more 100 more gold" textFill="WHITE">
                            <font>
-                              <Font size="13.0" />
+        <Font size="13.0" />
                            </font>
                         </Label>
-                     </children>
+        </children>
                   </Pane> -->
-                  <!-- <Pane layoutX="39.0" layoutY="414.0" prefHeight="66.0" prefWidth="472.0"
-                     style="-fx-background-color: #1A172A; -fx-background-radius: 10;">
+        <!-- <Pane layoutX="39.0" layoutY="414.0" prefHeight="66.0" prefWidth="472.0"
+        style="-fx-background-color: #1A172A; -fx-background-radius: 10;">
                      <children>
-                        <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="14.0" layoutY="19.0"
-                           pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="14.0" layoutY="19.0"
+        pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/chart.png" />
+                              <Image
+        url="@../resources/chart.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="58.0" layoutY="9.0" text="TRACK PRICES" textFill="#41951c">
+        <Label layoutX="58.0" layoutY="9.0" text="TRACK PRICES" textFill="#41951c">
                            <font>
-                              <Font size="14.0" />
+        <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label layoutX="58.0" layoutY="27.0"
-                           text="Save this search and get a notification when price changes"
+        <Label layoutX="58.0" layoutY="27.0"
+                           text="Save this search and
+        get a notification when price changes"
                            textFill="WHITE">
                            <font>
-                              <Font size="13.0" />
+        <Font size="13.0" />
                            </font>
                         </Label>
-                     </children>
+        </children>
                   </Pane> -->
-                  <!-- <Pane layoutX="569.0" layoutY="46.0" prefHeight="297.0" prefWidth="270.0"
-                     style="-fx-background-radius: 20;" styleClass="linear-grad"
-                     stylesheets="@../css/fullpackstyling.css">
+        <!-- <Pane layoutX="569.0" layoutY="46.0" prefHeight="297.0" prefWidth="270.0"
+        style="-fx-background-radius: 20;" styleClass="linear-grad"
+        stylesheets="@../css/fullpackstyling.css">
                      <children>
-                        <Button layoutX="63.0" layoutY="285.0" mnemonicParsing="false"
-                           prefHeight="25.0" prefWidth="145.0" styleClass="button4"
-                           stylesheets="@../css/fullpackstyling.css" text="ADD TO CART"
+                        <Button
+        layoutX="63.0" layoutY="285.0" mnemonicParsing="false"
+                           prefHeight="25.0"
+        prefWidth="145.0" styleClass="button4"
+                           stylesheets="@../css/fullpackstyling.css"
+        text="ADD TO CART"
                            textFill="WHITE" />
-                        <Label layoutX="54.0" layoutY="132.0" text="500 Gold" textFill="WHITE">
+                        <Label
+        layoutX="54.0" layoutY="132.0" text="500 Gold" textFill="WHITE">
                            <font>
-                              <Font size="36.0" />
+        <Font size="36.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="54.0" layoutY="208.0"
-                           pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="54.0" layoutY="208.0"
+        pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/ic_usr.png" />
+                              <Image
+        url="@../resources/ic_usr.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="95.0" layoutY="208.0" text="Jimm Falon" textFill="WHITE">
+        <Label layoutX="95.0" layoutY="208.0" text="Jimm Falon" textFill="WHITE">
                            <font>
-                              <Font size="13.0" />
+        <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label layoutX="97.0" layoutY="225.0" text="1200 Sales" textFill="#b5adad">
+        <Label layoutX="97.0" layoutY="225.0" text="1200 Sales" textFill="#b5adad">
                            <font>
-                              <Font size="11.0" />
+        <Font size="11.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="66.0" fitWidth="144.0" layoutX="102.0" layoutY="49.0"
-                           pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="66.0" fitWidth="144.0" layoutX="102.0" layoutY="49.0"
+        pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/eruro.png" />
+                              <Image
+        url="@../resources/eruro.png" />
                            </image>
                         </ImageView>
-                     </children>
+        </children>
                   </Pane> -->
-                  <!-- <Line endX="100.0" layoutX="445.0" layoutY="54.0" startX="100.0" startY="418.0"
-                     stroke="#b9b1b1" strokeDashOffset="2.0" />
-                  <Label layoutX="569.0" layoutY="377.0" text="What is wow " textFill="WHITE">
+        <!-- <Line endX="100.0" layoutX="445.0" layoutY="54.0" startX="100.0" startY="418.0"
+        stroke="#b9b1b1" strokeDashOffset="2.0" />
+                  <Label layoutX="569.0"
+        layoutY="377.0" text="What is wow " textFill="WHITE">
                      <font>
-                        <Font size="18.0" />
+                        <Font
+        size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="675.0" layoutY="377.0" text="Gold?" textFill="#fff600">
+                  <Label
+        layoutX="675.0" layoutY="377.0" text="Gold?" textFill="#fff600">
                      <font>
-                        <Font size="18.0" />
+        <Font size="18.0" />
                      </font>
                   </Label>
-                  <BorderPane layoutX="569.0" layoutY="404.0" prefHeight="66.0" prefWidth="270.0">
+                  <BorderPane
+        layoutX="569.0" layoutY="404.0" prefHeight="66.0" prefWidth="270.0">
                      <top>
-                        <Label alignment="CENTER" prefWidth="265.0"
-                           text="Mythic + dangerous 5 player dungeons where you must try to finish the run before a timer runs out. The time is applied to the dungeons you can play in normal/heroic/ mythic diff"
-                           textFill="#9a9292" wrapText="true" BorderPane.alignment="CENTER">
+        <Label alignment="CENTER" prefWidth="265.0"
+                           text="Mythic +
+        dangerous 5 player dungeons where you must try to finish the run before a timer runs out.
+        The time is applied to the dungeons you can play in normal/heroic/ mythic diff"
+        textFill="#9a9292" wrapText="true" BorderPane.alignment="CENTER">
                            <font>
-                              <Font size="13.0" />
+        <Font size="13.0" />
                            </font>
                         </Label>
-                     </top>
+        </top>
                   </BorderPane> -->
-                  <!-- <Pane layoutX="39.0" layoutY="241.0" prefHeight="66.0" prefWidth="472.0"
-                     style="-fx-background-color: #1A172A; -fx-background-radius: 10;">
+        <!-- <Pane layoutX="39.0" layoutY="241.0" prefHeight="66.0" prefWidth="472.0"
+        style="-fx-background-color: #1A172A; -fx-background-radius: 10;">
                      <children>
-                        <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0"
-                           pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0"
+        pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/eruro.png" />
+                              <Image
+        url="@../resources/eruro.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="58.0" layoutY="14.0" text="QUANTITY TIPS:"
+        <Label layoutX="58.0" layoutY="14.0" text="QUANTITY TIPS:"
                            textFill="#41951c">
-                           <font>
+        <font>
                               <Font size="14.0" />
                            </font>
-                        </Label>
+        </Label>
                         <Label layoutX="58.0" layoutY="34.0"
-                           text="Save 0.03 per gold if you buy more 100 more gold" textFill="WHITE">
+                           text="Save
+        0.03 per gold if you buy more 100 more gold" textFill="WHITE">
                            <font>
-                              <Font size="13.0" />
+        <Font size="13.0" />
                            </font>
                         </Label>
-                     </children>
+        </children>
                   </Pane> -->
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-   </children>
+    </children>
 </AnchorPane>

@@ -14,9 +14,10 @@ public class Main extends Application {
     //define your offsets here
     private double xOffset = 0;
     private double yOffset = 0;
+    
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("DashboardPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Sidebar.fxml"));
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         
         //grab your root here
