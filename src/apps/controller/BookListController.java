@@ -12,6 +12,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.Node;
 import java.util.ArrayList;
 import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.Parent;
+import javafx.scene.layout.AnchorPane;
+
 
 import java.io.IOException;
 
@@ -37,12 +41,22 @@ public class BookListController implements Initializable {
     @FXML
     private Label bookPrice;
 
+    @FXML
+    private Button btnEdit;
+
+    @FXML
+    private Button btnCreate;
+
+
+    @FXML
+    private AnchorPane pnlChange;
+
     public void initialize(URL location, ResourceBundle resources) {
         BookNovel harryPotter = new BookNovel("Harry Potter and the Philosopher", "J.K. Rowling", 50, 70000);
 
         BookNovel harryPotter2 = new BookNovel("Harry Potter and the Chamber of", "J.K. Rowling", 40, 60000);
 
-        BookNovel harryPotter3 = new BookNovel("Harry Potter and the Prisoner of Azkaban", "J.K. Rowling", 35, 50000);
+        BookNovel harryPotter3 = new BookNovel("Harry", "J.K. Rowling", 35, 50000);
 
         ArrayList<BookNovel> BookNovels = new ArrayList<>();
         BookNovels.add(harryPotter);
@@ -92,6 +106,29 @@ public class BookListController implements Initializable {
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
+        if (event.getSource() == btnEdit) {
+            try {
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("../fxml/BookEditor.fxml"));
+                Parent root = loader.load();
+    
+                pnlChange.getChildren().setAll(root);
+            } catch (Exception e) {
+                // TODO: handle exception
+                e.printStackTrace();
+            }
+        } else if (event.getSource() == btnCreate) {
+            try {
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("../fxml/CreateBook.fxml"));
+                Parent root = loader.load();
+    
+                pnlChange.getChildren().setAll(root);
+            } catch (Exception e) {
+                // TODO: handle exception
+                e.printStackTrace();
+            }
+        }
     }
 
 }

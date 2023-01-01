@@ -50,7 +50,7 @@ public class SidebarController implements Initializable {
                 // TODO: handle exception
             }
 
-        } else if(event.getSource() == btnDashboard) {
+        } else if (event.getSource() == btnDashboard) {
             try {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("../fxml/DashboardPage.fxml"));
@@ -60,6 +60,6 @@ public class SidebarController implements Initializable {
                 // TODO: handle exception
             }
         }
-}
+    }
 
 }

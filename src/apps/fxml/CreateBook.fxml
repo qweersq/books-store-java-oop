@@ -13,24 +13,24 @@
 <AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="551.0" prefWidth="886.0"
    style="-fx-background-color: #131022; -fx-background-radius: 10;"
    stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1"
-   xmlns="http://javafx.com/javafx/19" fx:controller="apps.controller.EditBookController">
+   xmlns="http://javafx.com/javafx/19" fx:controller="apps.controller.CreateBookController">
    <children>
-      <Label layoutX="36.0" layoutY="34.0" text="BOOKS" textFill="#fff600">
+      <Label layoutX="36.0" layoutY="34.0" text="BOOK" textFill="#fff600">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
       <Button fx:id="btnCancel" onAction="#handleButtonAction" alignment="CENTER" graphicTextGap="22.0" layoutX="743.0"
          layoutY="458.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100"
-         styleClass="button6"
+        styleClass="button6"
          stylesheets="@../../css/fullpackstyling.css" text="Cancel" textFill="#fefe">
       </Button>
-      <Button fx:id="btnSave" alignment="CENTER" graphicTextGap="22.0" layoutX="613.0"
+      <Button fx:id="btnSubmit" alignment="CENTER" graphicTextGap="22.0" layoutX="613.0"
          layoutY="458.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100"
-         styleClass="button5" stylesheets="@../../css/fullpackstyling.css" text="Save"
+         styleClass="button5" stylesheets="@../../css/fullpackstyling.css" text="Submit"
          textFill="#fefe">
       </Button>
-      <Label layoutX="120.0" layoutY="34.0" text=" Editor" textFill="WHITE">
+      <Label layoutX="120.0" layoutY="34.0" text=" Create" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>

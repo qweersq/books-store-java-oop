@@ -17,7 +17,7 @@
 <?import javafx.scene.control.TextField?>
 
 
-<AnchorPane layoutX="0" layoutY="0" prefHeight="551.0" prefWidth="886.0"
+<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="551.0" prefWidth="886.0"
    style="-fx-background-color: #131022; -fx-background-radius: 10;"
    stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1"
    fx:controller="apps.controller.BookListController">
@@ -78,15 +78,16 @@
             </VBox>
          </content>
       </ScrollPane>
-      <Button fx:id="btnCreate" layoutX="730" layoutY="35.0" alignment="CENTER" styleClass="button5"
+      <Button fx:id="btnCreate" onAction="#handleButtonAction" layoutX="730" layoutY="35.0"
+         alignment="CENTER" styleClass="button5"
          graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100"
          textFill="#fefe" stylesheets="@../../css/fullpackstyling.css" text="Create">
       </Button>
-      <TextField fx:id="inputText" styleClass="inputid" prefWidth="70" prefHeight="42" layoutX="500"
+      <TextField fx:id="fieldId" styleClass="inputid" prefWidth="70" prefHeight="42" layoutX="500"
          layoutY="480.0" promptText="Enter Id" />
-      <Button fx:id="btnEdit" layoutX="600" layoutY="480.0" alignment="CENTER" styleClass="button5"
-         graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100"
-         textFill="#fefe" stylesheets="@../../css/fullpackstyling.css" text="Edit">
+      <Button fx:id="btnEdit" onAction="#handleButtonAction"  layoutX="600" layoutY="480.0" alignment="CENTER"
+         styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0"
+         prefWidth="100" textFill="#fefe" stylesheets="@../../css/fullpackstyling.css" text="Edit">
       </Button>
       <Button fx:id="btnDelete" layoutX="730" layoutY="480.0" alignment="CENTER"
          styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0"

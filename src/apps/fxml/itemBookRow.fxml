@@ -19,7 +19,7 @@
             </HBox.margin>
         </Label>
 
-        <Label fx:id="bookTitle" textOverrun="CLIP" maxWidth="150" text="#" textFill="#b7c3d7">
+        <Label fx:id="bookTitle" prefWidth="150" text="#" textFill="#b7c3d7">
             <HBox.margin>
                 <Insets right="80" />
             </HBox.margin>
