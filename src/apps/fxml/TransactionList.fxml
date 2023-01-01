@@ -21,36 +21,26 @@
                 <Insets left="10.0" />
             </HBox.margin>
         </ImageView> -->
-        <Label fx:id="idBooks" text="1" textFill="#b7c3d7">
+        <Label fx:id="idBooks" prefWidth="90" text="1" textFill="#b7c3d7">
             <HBox.margin>
-                <Insets left="30.0" right="90" />
+                <Insets left="30.0" />
             </HBox.margin>
         </Label>
 
-        <Label text="Athailah Adhar" textFill="#b7c3d7">
-            <HBox.margin>
-                <Insets right="80" />
-            </HBox.margin>
+        <Label fx:id="cusName" prefWidth="160" text="Athailah Adhar" textFill="#b7c3d7">
+            
         </Label>
-        <Label fx:id="bookTitle" text="" textFill="#b7c3d7">
-            <HBox.margin>
-                <Insets right="80" />
-            </HBox.margin>
+        <Label fx:id="bookTitle" prefWidth="190" text="" textFill="#b7c3d7">
+           
         </Label>
-        <Label text="3" textFill="#b7c3d7">
-            <HBox.margin>
-                <Insets right="80" />
-            </HBox.margin>
+        <Label fx:id="bookQty" prefWidth="120" text="3" textFill="#b7c3d7">
+           
         </Label>
-        <Label text="100.000" textFill="#b7c3d7">
-            <HBox.margin>
-                <Insets right="60" />
-            </HBox.margin>
+        <Label fx:id="bookPrice" prefWidth="110" text="100.000" textFill="#b7c3d7">
+           
         </Label>
-        <Label text="300.000" textFill="#b7c3d7">
-            <HBox.margin>
-                <Insets right="30" />
-            </HBox.margin>
+        <Label fx:id="bookAmount" text="300.000" textFill="#b7c3d7">
+         
         </Label>
 
         <!-- <Label text="Athailah" textFill="#b7c3d7">

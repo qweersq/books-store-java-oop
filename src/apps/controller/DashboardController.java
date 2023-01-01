@@ -1,4 +1,4 @@
-package apps;
+package apps.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,9 +34,9 @@ public class DashboardController implements Initializable {
         for (int i = 0; i < BooksTitle.size(); i++) {
             try {
                 final int j = i;
-                nodes[i] = FXMLLoader.load(getClass().getResource("TransactionList.fxml"));
+                nodes[i] = FXMLLoader.load(getClass().getResource("../fxml/TransactionList.fxml"));
 
-                //give the items some effect
+                // give the items some effect
                 nodes[i].setOnMouseEntered(event -> {
                     nodes[j].setStyle("-fx-background-color : #0A0E3F");
                 });
@@ -44,7 +44,7 @@ public class DashboardController implements Initializable {
                     nodes[j].setStyle("-fx-background-color : #02030A");
                 });
 
-                //set the data to the labels
+                // set the data to the labels
                 bookTitle = (Label) nodes[i].lookup("#bookTitle");
                 bookTitle.setText(BooksTitle.get(i));
 
@@ -59,27 +59,27 @@ public class DashboardController implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event) {
         // if (event.getSource() == btnBooks) {
-        //     try {
-        //         FXMLLoader loader = new FXMLLoader();
-        //         loader.setLocation(getClass().getResource("BooksPage.fxml"));
-        //         Parent root = loader.load();
+        // try {
+        // FXMLLoader loader = new FXMLLoader();
+        // loader.setLocation(getClass().getResource("BooksPage.fxml"));
+        // Parent root = loader.load();
 
-        //         pnlChange.getChildren().setAll(root);
-        //     } catch (Exception e) {
-        //         // TODO: handle exception
-        //     }
+        // pnlChange.getChildren().setAll(root);
+        // } catch (Exception e) {
+        // // TODO: handle exception
+        // }
 
         // } else if(event.getSource() == btnDashboard) {
-        //     try {
-        //         FXMLLoader loader = new FXMLLoader();
-        //         loader.setLocation(getClass().getResource("DashboardPage.fxml"));
-        //         Parent root = loader.load();
+        // try {
+        // FXMLLoader loader = new FXMLLoader();
+        // loader.setLocation(getClass().getResource("DashboardPage.fxml"));
+        // Parent root = loader.load();
 
-        //         pnlChange.getChildren().setAll(root);
-        //     } catch (Exception e) {
-        //         // TODO: handle exception
-        //     }
+        // pnlChange.getChildren().setAll(root);
+        // } catch (Exception e) {
+        // // TODO: handle exception
         // }
-}
+        // }
+    }
 
 }

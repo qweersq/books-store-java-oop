@@ -16,7 +16,7 @@
 <?import javafx.scene.control.ScrollPane?>
 
 
-<AnchorPane style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.Sidebar">
+<AnchorPane style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.SidebarController">
    <children>
       <AnchorPane prefHeight="616.0" prefWidth="993.0"
          style="-fx-background-color: #030307; -fx-background-radius: 15;">
@@ -29,24 +29,24 @@
                      style="-fx-background-radius: 15 0 15 15;" />
                   <Button fx:id="btnDashboard" onAction="#handleButtonAction" contentDisplay="TOP" mnemonicParsing="false"
                      prefHeight="66.0" prefWidth="74.0" styleClass="button3"
-                     stylesheets="@../css/fullpackstyling.css" text="Dashboard" textFill="#a868a0">
+                     stylesheets="@../../css/fullpackstyling.css" text="Dashboard" textFill="#a868a0">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true"
                            preserveRatio="true">
                            <image>
-                              <Image url="@../resources/cat.png" />
+                              <Image url="@../../resources/cat.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
                   <Button fx:id="btnBooks" onAction="#handleButtonAction" contentDisplay="TOP" layoutX="10.0" layoutY="10.0"
                      mnemonicParsing="false" prefHeight="66.0" prefWidth="74.0" styleClass="button3"
-                     stylesheets="@../css/fullpackstyling.css" text="Books" textFill="#a868a0">
+                     stylesheets="@../../css/fullpackstyling.css" text="Books" textFill="#a868a0">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true"
                            preserveRatio="true">
                            <image>
-                              <Image url="@../resources/time.png" />
+                              <Image url="@../../resources/time.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -56,7 +56,7 @@
 
             <AnchorPane  fx:id="pnlChange" layoutX="91.0" layoutY="30.0" prefHeight="551.0" prefWidth="886.0"
                style="-fx-background-color: #131022; -fx-background-radius: 10;"
-               stylesheets="@../css/fullpackstyling.css">
+               stylesheets="@../../css/fullpackstyling.css">
                <children>
                  
                </children>
