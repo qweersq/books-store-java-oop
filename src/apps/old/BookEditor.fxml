@@ -5,9 +5,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.AnchorPane?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="436.0" style="-fx-background-color: #131022; -fx-border-color: #030307; -fx-border-width: 16;" stylesheets="@../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+
+<AnchorPane layoutX="0" layoutY="0" prefHeight="551.0" prefWidth="886.0"
+   style="-fx-background-color: #131022; -fx-background-radius: 10;"
+   stylesheets="@../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.Controller">
    <children>
       <Text fill="#fff60e" layoutX="32.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BOOK">
          <font>
@@ -57,4 +61,4 @@
       <Button fx:id="btnSave" layoutX="238.0" layoutY="336.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #524a7b;" text="Save" textFill="WHITE" />
       <Button fx:id="btnCancel" layoutX="239.0" layoutY="296.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #b20000;" text="Cancel" textFill="WHITE" />
    </children>
-</Pane>
+</AnchorPane>

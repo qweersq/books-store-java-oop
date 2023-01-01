@@ -1,5 +1,9 @@
 .inputid {
+<<<<<<< HEAD
   -fx-background-color: #393351;
+=======
+  -fx-background-color: #fff;
+>>>>>>> a38dac0
   -fx-background-radius: 5;
 }
 .button1 {
@@ -61,6 +65,17 @@
   -fx-background-color: #524a7b;
 }
 .button5:pressed {
+  -fx-background-color: #2f2b43;
+}
+
+.button6 {
+  -fx-background-color: #310000;
+  -fx-background-radius: 0 0 0 0;
+}
+.button6:hover {
+  -fx-background-color: #280202;
+}
+.button6:pressed {
   -fx-background-color: #2f2b43;
 }
 
