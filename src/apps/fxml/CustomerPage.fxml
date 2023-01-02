@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="550.0" prefWidth="1062.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="apps.controller.DashboardController">
+    <children>
+        <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#fff600">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+        <Label layoutX="170.0" layoutY="34.0" text="Store" textFill="WHITE">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnEdit" alignment="CENTER" graphicTextGap="22.0" layoutX="585.0" layoutY="410.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="388.0" style="-fx-background-color: #418f1e;" styleClass="button4" stylesheets="@../../css/fullpackstyling.css" text="Pay" textFill="#ffffffed">
+        </Button>
+      <GridPane layoutX="36.0" layoutY="106.0" prefHeight="339.0" prefWidth="479.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="238.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane prefHeight="60.0" prefWidth="479.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ComboBox fx:id="cmbCategory" blendMode="SRC_ATOP" prefHeight="27.0" prefWidth="189.0" promptText="Category" style="-fx-border-color: #fff600; -fx-color: blue;" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="50.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+               </children>
+            </GridPane>
+            <GridPane prefHeight="32.0" prefWidth="474.0" GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Id" textFill="#e7e5e5" />
+                  <Label text="Title" textFill="#e7e5e5" GridPane.columnIndex="1" />
+                  <Label text="Price" textFill="#e7e5e5" GridPane.columnIndex="4" />
+                  <Label text="Stock" textFill="#e7e5e5" GridPane.columnIndex="3" />
+                  <Label text="Author" textFill="#e7e5e5" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+            <VBox fx:id="pnItemsBook" prefHeight="318.0" prefWidth="844.0" spacing="5.0" style="-fx-background-color: #131022;" GridPane.rowIndex="2">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </GridPane>
+      <GridPane layoutX="585.0" layoutY="140.0" prefHeight="270.0" prefWidth="388.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField promptText="ID" />
+            <TextField promptText="Title" GridPane.rowIndex="1" />
+            <TextField promptText="Author" GridPane.rowIndex="2" />
+            <TextField promptText="Stock" GridPane.rowIndex="3" />
+            <TextField promptText="Price" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Label layoutX="714.0" layoutY="87.0" text="Order Book" textFill="#fff600">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+
+    </children>
+</AnchorPane>
