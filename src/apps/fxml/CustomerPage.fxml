@@ -89,11 +89,11 @@
             <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField promptText="ID" />
-            <TextField promptText="Title" GridPane.rowIndex="1" />
-            <TextField promptText="Author" GridPane.rowIndex="2" />
-            <TextField promptText="Stock" GridPane.rowIndex="3" />
-            <TextField promptText="Price" GridPane.rowIndex="4" />
+            <TextField fx:id="txtId" promptText="ID" />
+            <TextField fx:id="txtTitle" promptText="Title" GridPane.rowIndex="1" />
+            <TextField fx:id="txtAuthor" promptText="Author" GridPane.rowIndex="2" />
+            <TextField fx:id="txtStock" promptText="Stock" GridPane.rowIndex="3" />
+            <TextField fx:id="txtPrice" promptText="Price" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <Label layoutX="714.0" layoutY="87.0" text="Order Book" textFill="#fff600">
