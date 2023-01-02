@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="550.0" prefWidth="1062.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="apps.controller.DashboardController">
+<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="550.0" prefWidth="1062.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="apps.controller.CustomerPageController">
     <children>
         <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#fff600">
             <font>
@@ -24,7 +24,7 @@
                 <Font size="26.0" />
             </font>
         </Label>
-        <Button fx:id="btnEdit" alignment="CENTER" graphicTextGap="22.0" layoutX="585.0" layoutY="410.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="388.0" style="-fx-background-color: #418f1e;" styleClass="button4" stylesheets="@../../css/fullpackstyling.css" text="Pay" textFill="#ffffffed">
+        <Button fx:id="btnPayment" onAction="#handleButtonAction" alignment="CENTER" graphicTextGap="22.0" layoutX="585.0" layoutY="410.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="388.0" style="-fx-background-color: #418f1e;" styleClass="button4" stylesheets="@../../css/fullpackstyling.css" text="Pay" textFill="#ffffffed">
         </Button>
       <GridPane layoutX="36.0" layoutY="106.0" prefHeight="339.0" prefWidth="479.0">
         <columnConstraints>

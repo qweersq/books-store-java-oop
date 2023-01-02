@@ -8,14 +8,17 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+
+
 public class Main extends Application {
     // define your offsets here
     private double xOffset = 0;
     private double yOffset = 0;
 
+
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("fxml/Sidebar.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/LoginPage.fxml"));
         primaryStage.initStyle(StageStyle.TRANSPARENT);
 
         // grab your root here
