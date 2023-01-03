@@ -75,6 +75,18 @@
   -fx-background-color: #2f2b43;
 }
 
+.btnLogout {
+  -fx-background-color: #131022;
+  -fx-border-radius: 30;
+  -fx-border-color: #fff;
+}
+.btnLogout:hover {
+  -fx-background-color: #222020;
+}
+.btnLogout:pressed {
+  -fx-background-color: #2f2b43;
+}
+
 .combo-box {
   -fx-background-color: #141124;
   -fx-border-color: #515658;

@@ -70,7 +70,7 @@
       <ScrollPane layoutX="14.0" layoutY="152.0" prefHeight="320.0" prefWidth="846.0"
          stylesheets="@../../css/fullpackstyling.css">
          <content>
-            <VBox fx:id="pnItemsBook" prefHeight="318.0" prefWidth="844.0" spacing="5.0"
+            <VBox fx:id="pnItemsBook" prefHeight="418" prefWidth="844.0" spacing="5.0"
                style="-fx-background-color: #131022;">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -89,7 +89,7 @@
          styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0"
          prefWidth="100" textFill="#fefe" stylesheets="@../../css/fullpackstyling.css" text="Edit">
       </Button>
-      <Button fx:id="btnDelete" layoutX="730" layoutY="480.0" alignment="CENTER"
+      <Button fx:id="btnDelete" onAction="#handleButtonAction" layoutX="730" layoutY="480.0" alignment="CENTER"
          styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0"
          prefWidth="100" textFill="#fefe" stylesheets="@../../css/fullpackstyling.css" text="Hapus">
       </Button>

@@ -7,7 +7,7 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import apps.books.BookNovel;
+import apps.object.ArrayListData;
 import javafx.scene.layout.VBox;
 import javafx.scene.Node;
 import java.util.ArrayList;
@@ -15,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.TextField;
 
 
 import java.io.IOException;
@@ -47,24 +48,20 @@ public class BookListController implements Initializable {
     @FXML
     private Button btnCreate;
 
+    @FXML
+    private Button btnDelete;
 
     @FXML
     private AnchorPane pnlChange;
 
+    @FXML
+    private TextField fieldId;
+
     public void initialize(URL location, ResourceBundle resources) {
-        BookNovel harryPotter = new BookNovel("Harry Potter and the Philosopher", "J.K. Rowling", 50, 70000);
+        
 
-        BookNovel harryPotter2 = new BookNovel("Harry Potter and the Chamber of", "J.K. Rowling", 40, 60000);
-
-        BookNovel harryPotter3 = new BookNovel("Harry", "J.K. Rowling", 35, 50000);
-
-        ArrayList<BookNovel> BookNovels = new ArrayList<>();
-        BookNovels.add(harryPotter);
-        BookNovels.add(harryPotter2);
-        BookNovels.add(harryPotter3);
-
-        Node[] nodes = new Node[5];
-        for (int i = 0; i < BookNovels.size(); i++) {
+        Node[] nodes = new Node[1000];
+        for (int i = 0; i < ArrayListData.getSize(); i++) {
             try {
                 final int j = i;
                 nodes[i] = FXMLLoader.load(getClass().getResource("../fxml/itemBookRow.fxml"));
@@ -82,19 +79,19 @@ public class BookListController implements Initializable {
                 idBook.setText((i + 1) + "");
 
                 bookTitle = (Label) nodes[i].lookup("#bookTitle");
-                bookTitle.setText(BookNovels.get(i).getTitle());
+                bookTitle.setText(ArrayListData.getTitle(i));
 
                 bookAuthor = (Label) nodes[i].lookup("#bookAuthor");
-                bookAuthor.setText(BookNovels.get(i).getAuthor());
+                bookAuthor.setText(ArrayListData.getAuthor(i));
 
                 bookCategory = (Label) nodes[i].lookup("#bookCategory");
-                bookCategory.setText(BookNovels.get(i).getCategory());
+                bookCategory.setText(ArrayListData.getCategory(i));
 
                 bookStock = (Label) nodes[i].lookup("#bookStock");
-                bookStock.setText(BookNovels.get(i).getStock() + "");
+                bookStock.setText(ArrayListData.getStock(i) + "");
 
                 bookPrice = (Label) nodes[i].lookup("#bookPrice");
-                bookPrice.setText(BookNovels.get(i).getPrice() + "");
+                bookPrice.setText(ArrayListData.getPrice(i) + "");
 
                 pnItemsBook.getChildren().add(nodes[i]);
 
@@ -108,6 +105,7 @@ public class BookListController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         if (event.getSource() == btnEdit) {
             try {
+                EditBookController.idBookEdit = Integer.parseInt(fieldId.getText())-1;
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("../fxml/BookEditor.fxml"));
                 Parent root = loader.load();
@@ -121,6 +119,19 @@ public class BookListController implements Initializable {
             try {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("../fxml/CreateBook.fxml"));
+                Parent root = loader.load();
+    
+                pnlChange.getChildren().setAll(root);
+            } catch (Exception e) {
+                // TODO: handle exception
+                e.printStackTrace();
+            }
+        } else if (event.getSource() == btnDelete) {
+            try {
+                ArrayListData.deleteBook(Integer.parseInt(fieldId.getText())-1);
+                
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("../fxml/BookList.fxml"));
                 Parent root = loader.load();
     
                 pnlChange.getChildren().setAll(root);

@@ -1,4 +1,4 @@
-package apps.books;
+package apps.object;
 
 public class BookNovel extends Book<String> {
     public BookNovel(String title, String author, int stock, int price) {

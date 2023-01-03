@@ -1,4 +1,4 @@
-package apps.books;
+package apps.object;
 
 public class Book<T> {
   private String title;

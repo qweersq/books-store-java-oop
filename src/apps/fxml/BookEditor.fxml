@@ -25,7 +25,7 @@
          styleClass="button6"
          stylesheets="@../../css/fullpackstyling.css" text="Cancel" textFill="#fefe">
       </Button>
-      <Button fx:id="btnSave" alignment="CENTER" graphicTextGap="22.0" layoutX="613.0"
+      <Button fx:id="btnSave" onAction="#handleButtonAction" alignment="CENTER" graphicTextGap="22.0" layoutX="613.0"
          layoutY="458.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100"
          styleClass="button5" stylesheets="@../../css/fullpackstyling.css" text="Save"
          textFill="#fefe">
@@ -34,7 +34,7 @@
          <font>
             <Font size="26.0" />
          </font>
-      </Label>
+      </Label>      
       <TextField disable="true" layoutX="759.0" layoutY="34.0" prefHeight="42.0" prefWidth="84.0"
          promptText="ID" style="-fx-background-color: #fff600;">
          <font>
@@ -60,22 +60,22 @@
                   <Font size="18.0" />
                </font>
             </Text>
-            <TextField fx:id="txtTitle" promptText="Title" GridPane.columnIndex="2" />
+            <TextField fx:id="txtTitleEdit" promptText="Title" GridPane.columnIndex="2" />
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Author"
                GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <TextField fx:id="txtAuthor" promptText="Author" GridPane.columnIndex="2"
+            <TextField fx:id="txtAuthorEdit" promptText="Author" GridPane.columnIndex="2"
                GridPane.rowIndex="1" />
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity"
+               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock"
                GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <TextField fx:id="txtQuantity" promptText="Quantity" GridPane.columnIndex="2"
+            <TextField fx:id="txtStockEdit" promptText="Stock" GridPane.columnIndex="2"
                GridPane.rowIndex="2" />
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Category"
                GridPane.rowIndex="3">
@@ -83,7 +83,7 @@
                   <Font size="18.0" />
                </font>
             </Text>
-            <TextField fx:id="txtCategory" promptText="Category" GridPane.columnIndex="2"
+            <TextField fx:id="txtCategoryEdit" promptText="Category" GridPane.columnIndex="2"
                GridPane.rowIndex="3" />
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Price"
                GridPane.rowIndex="4">
@@ -91,7 +91,7 @@
                   <Font size="18.0" />
                </font>
             </Text>
-            <TextField fx:id="txtPrice" promptText="Price" GridPane.columnIndex="2"
+            <TextField fx:id="txtPriceEdit" promptText="Price" GridPane.columnIndex="2"
                GridPane.rowIndex="4" />
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=":"
                GridPane.columnIndex="1">
