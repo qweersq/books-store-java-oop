@@ -58,8 +58,6 @@ public class BookListController implements Initializable {
     private TextField fieldId;
 
     public void initialize(URL location, ResourceBundle resources) {
-        
-
         Node[] nodes = new Node[1000];
         for (int i = 0; i < ArrayListData.getSize(); i++) {
             try {

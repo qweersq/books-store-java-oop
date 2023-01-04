@@ -11,6 +11,8 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ScrollPane?>
+
 
 <AnchorPane fx:id="pnlMain" layoutX="0" layoutY="0" prefHeight="550.0" prefWidth="1062.0"
    style="-fx-background-color: #131022; -fx-background-radius: 10;"
@@ -27,6 +29,7 @@
             <Font size="26.0" />
          </font>
       </Label>
+
       <Button fx:id="btnLogout" onAction="#handleButtonAction" layoutX="830" layoutY="25.0"
          alignment="CENTER"
          styleClass="btnLogout" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="27.0"
@@ -38,6 +41,7 @@
          styleClass="button4" stylesheets="@../../css/fullpackstyling.css" text="Pay"
          textFill="#ffffffed">
       </Button>
+
       <GridPane layoutX="36.0" layoutY="106.0" prefHeight="339.0" prefWidth="479.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -68,8 +72,7 @@
             </GridPane>
             <GridPane prefHeight="32.0" prefWidth="474.0" GridPane.rowIndex="1">
                <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -81,18 +84,23 @@
                   <Label text="Id" textFill="#e7e5e5" />
                   <Label text="Title" textFill="#e7e5e5" GridPane.columnIndex="1" />
                   <Label text="Price" textFill="#e7e5e5" GridPane.columnIndex="4" />
-                  <Label text="Stock" textFill="#e7e5e5" GridPane.columnIndex="3" />
+                  <Label text="Quantity" textFill="#e7e5e5" GridPane.columnIndex="3" />
                   <Label text="Author" textFill="#e7e5e5" GridPane.columnIndex="2" />
                </children>
             </GridPane>
-            <VBox fx:id="pnItemsBook" prefHeight="318.0" prefWidth="844.0" spacing="5.0"
-               style="-fx-background-color: #131022;" GridPane.rowIndex="2">
+            
+         </children>
+      </GridPane>
+      <ScrollPane layoutX="30.0" layoutY="200.0" prefHeight="320.0" prefWidth="530.0" stylesheets="@../../css/fullpackstyling.css">
+         <content>
+            <VBox fx:id="pnItemsBook" prefHeight="418" prefWidth="530.0" spacing="5.0"
+               style="-fx-background-color: #131022;">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </VBox>
-         </children>
-      </GridPane>
+         </content>
+      </ScrollPane>
       <GridPane layoutX="585.0" layoutY="140.0" prefHeight="270.0" prefWidth="388.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -105,13 +113,24 @@
             <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField fx:id="txtId" promptText="ID" />
-            <TextField fx:id="txtTitle" promptText="Title" GridPane.rowIndex="1" />
-            <TextField fx:id="txtAuthor" promptText="Author" GridPane.rowIndex="2" />
-            <TextField fx:id="txtStock" promptText="Stock" GridPane.rowIndex="3" />
-            <TextField fx:id="txtPrice" promptText="Price" GridPane.rowIndex="4" />
+            <TextField editable="false" fx:id="txtTitle" promptText="Title" GridPane.rowIndex="1" />
+            <TextField editable="false" fx:id="txtAuthor" promptText="Author" GridPane.rowIndex="2" />
+            <TextField editable="false" fx:id="txtPrice" promptText="Price" GridPane.rowIndex="3" />
+            <TextField editable="false" fx:id="txtAmount" promptText="Amount" GridPane.rowIndex="4" />
          </children>
+
       </GridPane>
+      <TextField fx:id="txtId" promptText="ID" layoutX="585.0" layoutY="150" prefHeight="30.0"
+         prefWidth="130.0" />
+      <TextField fx:id="txtQty" promptText="Quantity" layoutX="720.0" layoutY="150"
+         prefHeight="30.0"
+         prefWidth="130.0" />
+      <Button fx:id="btnId" onAction="#handleButtonAction" layoutX="870" layoutY="151.0"
+         alignment="CENTER"
+         styleClass="btnLogout" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="27.0"
+         prefWidth="100" textFill="#fefe" stylesheets="@../../css/fullpackstyling.css"
+         text="Check Book">
+      </Button>
       <Label layoutX="714.0" layoutY="87.0" text="Order Book" textFill="#fff600">
          <font>
             <Font size="26.0" />
