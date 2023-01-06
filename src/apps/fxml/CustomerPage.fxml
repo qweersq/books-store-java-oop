@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -11,13 +12,8 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.control.ScrollPane?>
 
-
-<AnchorPane fx:id="pnlMain" layoutX="0" layoutY="0" prefHeight="550.0" prefWidth="1062.0"
-   style="-fx-background-color: #131022; -fx-background-radius: 10;"
-   stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1"
-   xmlns="http://javafx.com/javafx/19" fx:controller="apps.controller.CustomerPageController">
+<AnchorPane fx:id="pnlMain" layoutX="0" layoutY="0" prefHeight="550.0" prefWidth="1000.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.CustomerPageController">
    <children>
       <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#fff600">
          <font>
@@ -30,16 +26,9 @@
          </font>
       </Label>
 
-      <Button fx:id="btnLogout" onAction="#handleButtonAction" layoutX="830" layoutY="25.0"
-         alignment="CENTER"
-         styleClass="btnLogout" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="27.0"
-         prefWidth="100" textFill="#fefe" stylesheets="@../../css/fullpackstyling.css" text="Logout">
+      <Button fx:id="btnLogout" alignment="CENTER" graphicTextGap="22.0" layoutX="830" layoutY="25.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="100" styleClass="btnLogout" stylesheets="@../../css/fullpackstyling.css" text="Logout" textFill="#fefe">
       </Button>
-      <Button fx:id="btnPayment" onAction="#handleButtonAction" alignment="CENTER"
-         graphicTextGap="22.0" layoutX="585.0" layoutY="410.0" mnemonicParsing="false"
-         prefHeight="42.0" prefWidth="388.0" style="-fx-background-color: #418f1e;"
-         styleClass="button4" stylesheets="@../../css/fullpackstyling.css" text="Pay"
-         textFill="#ffffffed">
+      <Button fx:id="btnPayment" alignment="CENTER" graphicTextGap="22.0" layoutX="585.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="388.0" style="-fx-background-color: #418f1e;" styleClass="button4" stylesheets="@../../css/fullpackstyling.css" text="Pay" textFill="#ffffffed">
       </Button>
 
       <GridPane layoutX="36.0" layoutY="106.0" prefHeight="339.0" prefWidth="479.0">
@@ -60,10 +49,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <ComboBox fx:id="cmbCategory" blendMode="SRC_ATOP" prefHeight="27.0"
-                     prefWidth="189.0" promptText="Category"
-                     style="-fx-border-color: #fff600; -fx-color: blue;"
-                     GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647">
+                  <ComboBox fx:id="cmbCategory" blendMode="SRC_ATOP" prefHeight="27.0" prefWidth="189.0" promptText="Category" style="-fx-border-color: #fff600; -fx-color: blue;" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647">
                      <GridPane.margin>
                         <Insets left="10.0" right="50.0" />
                      </GridPane.margin>
@@ -76,6 +62,7 @@
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints />
                </columnConstraints>
                <rowConstraints>
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -93,8 +80,7 @@
       </GridPane>
       <ScrollPane layoutX="30.0" layoutY="200.0" prefHeight="320.0" prefWidth="530.0" stylesheets="@../../css/fullpackstyling.css">
          <content>
-            <VBox fx:id="pnItemsBook" prefHeight="418" prefWidth="530.0" spacing="5.0"
-               style="-fx-background-color: #131022;">
+            <VBox fx:id="pnItemsBook" prefHeight="418" prefWidth="530.0" spacing="5.0" style="-fx-background-color: #131022;">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
@@ -113,23 +99,16 @@
             <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField editable="false" fx:id="txtTitle" promptText="Title" GridPane.rowIndex="1" />
-            <TextField editable="false" fx:id="txtAuthor" promptText="Author" GridPane.rowIndex="2" />
-            <TextField editable="false" fx:id="txtPrice" promptText="Price" GridPane.rowIndex="3" />
-            <TextField editable="false" fx:id="txtAmount" promptText="Amount" GridPane.rowIndex="4" />
+            <TextField fx:id="txtTitle" editable="false" promptText="Title" GridPane.rowIndex="1" />
+            <TextField fx:id="txtAuthor" editable="false" promptText="Author" GridPane.rowIndex="2" />
+            <TextField fx:id="txtPrice" editable="false" promptText="Price" GridPane.rowIndex="3" />
+            <TextField fx:id="txtAmount" editable="false" promptText="Amount" GridPane.rowIndex="4" />
          </children>
 
       </GridPane>
-      <TextField fx:id="txtId" promptText="ID" layoutX="585.0" layoutY="150" prefHeight="30.0"
-         prefWidth="130.0" />
-      <TextField fx:id="txtQty" promptText="Quantity" layoutX="720.0" layoutY="150"
-         prefHeight="30.0"
-         prefWidth="130.0" />
-      <Button fx:id="btnId" onAction="#handleButtonAction" layoutX="870" layoutY="151.0"
-         alignment="CENTER"
-         styleClass="btnLogout" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="27.0"
-         prefWidth="100" textFill="#fefe" stylesheets="@../../css/fullpackstyling.css"
-         text="Check Book">
+      <TextField fx:id="txtId" layoutX="585.0" layoutY="150" prefHeight="30.0" prefWidth="130.0" promptText="ID" />
+      <TextField fx:id="txtQty" layoutX="720.0" layoutY="150" prefHeight="30.0" prefWidth="130.0" promptText="Quantity" />
+      <Button fx:id="btnId" alignment="CENTER" graphicTextGap="22.0" layoutX="870" layoutY="151.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="100" styleClass="btnLogout" stylesheets="@../../css/fullpackstyling.css" text="Check Book" textFill="#fefe">
       </Button>
       <Label layoutX="714.0" layoutY="87.0" text="Order Book" textFill="#fff600">
          <font>

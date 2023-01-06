@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- <?import com.gluonhq.charm.glisten.control.ToggleButtonGroup?> -->
+
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pnlMain" fx:controller="apps.controller.RegisterController" layoutX="0" layoutY="0" prefHeight="391.0" prefWidth="633.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="pnlMain" layoutX="0" layoutY="0" prefHeight="500.0" prefWidth="550.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.RegisterController">
    <children>
       <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#fff600">
          <font>
@@ -23,21 +24,19 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <Label layoutX="427.0" layoutY="34.0" text="Register" textFill="#fff600">
+      <Label layoutX="196.0" layoutY="78.0" text="Register" textFill="#fff600">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <Label layoutX="521.0" layoutY="34.0" text=" Page" textFill="WHITE">
+      <Label layoutX="290.0" layoutY="78.0" text=" Page" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <GridPane layoutX="155.0" layoutY="85.0" prefHeight="245.0" prefWidth="310.0">
+      <GridPane layoutX="150.0" layoutY="110.0" prefHeight="345.0" prefWidth="270.0">
         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="67.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="175.0" />
-          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="95.0" minWidth="10.0" prefWidth="58.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="10.0" prefWidth="270.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="241.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
@@ -45,9 +44,9 @@
             <RowConstraints maxHeight="241.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField fx:id="password" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="email" promptText="Email" GridPane.columnIndex="1" />
-            <GridPane prefHeight="93.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TextField fx:id="password" promptText="Password" GridPane.rowIndex="1" />
+            <TextField fx:id="email" promptText="Email" />
+            <GridPane prefHeight="93.0" prefWidth="175.0" GridPane.rowIndex="2">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -56,20 +55,20 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="btnRegister" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #fff600;" styleClass="button4" text="Register">
+                  <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #fff600;" styleClass="button4" text="Register">
                      <GridPane.margin>
-                        <Insets left="10.0" />
+                        <Insets left="35.0" />
                      </GridPane.margin>
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnCancel" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" styleClass="button4" text="Cancel" GridPane.columnIndex="1">
+                  <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" styleClass="button4" text="Cancel" GridPane.columnIndex="1">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                      <GridPane.margin>
-                        <Insets left="10.0" />
+                        <Insets left="35.0" />
                      </GridPane.margin>
                   </Button>
                </children>
