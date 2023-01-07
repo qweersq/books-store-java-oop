@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="613.0" prefWidth="1100.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.LoginController">
+<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" maxHeight="550.0" maxWidth="1000.0" minHeight="550.0" minWidth="575.0" prefHeight="550.0" prefWidth="1000.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.LoginController">
    <children>
       <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#fff600">
          <font>
@@ -24,17 +24,17 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <Label layoutX="395.0" layoutY="34.0" text="Login" textFill="#fff600">
+      <Label layoutX="830.0" layoutY="34.0" text="Login" textFill="#fff600">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <Label layoutX="459.0" layoutY="34.0" text=" Page" textFill="WHITE">
+      <Label layoutX="894.0" layoutY="34.0" text=" Page" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <GridPane layoutX="150.0" layoutY="110.0" prefHeight="345.0" prefWidth="270.0">
+      <GridPane layoutX="365.0" layoutY="103.0" prefHeight="345.0" prefWidth="270.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="0.0" prefWidth="270.0" />
           <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="95.0" minWidth="0.0" prefWidth="0.0" />
