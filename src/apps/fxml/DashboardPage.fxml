@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="520.0" prefWidth="845.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.DashboardController">
+<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="770.0" prefWidth="500.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="apps.controller.DashboardController">
     <children>
         <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#fff600">
             <font>
@@ -22,7 +22,7 @@
                 <Font size="26.0" />
             </font>
         </Label>
-        <HBox alignment="CENTER_LEFT" layoutX="0" layoutY="78.0" prefHeight="42.0" prefWidth="845.0" spacing="80.0" style="-fx-background-color: #131022;">
+        <HBox alignment="CENTER_LEFT" layoutX="0" layoutY="78.0" prefHeight="42.0" prefWidth="855.0" spacing="80.0" style="-fx-background-color: #131022;">
             <children>
                 <Label text="Id" textFill="#e7e5e5">
                     <HBox.margin>
@@ -56,20 +56,21 @@
                 </Label>
             </children>
         </HBox>
-        <ScrollPane layoutX="14.0" layoutY="132.0" prefHeight="320.0" prefWidth="845.0" stylesheets="@../../css/fullpackstyling.css">
+        <ScrollPane layoutX="14.0" layoutY="132.0" prefHeight="520.0" prefWidth="855.0" stylesheets="@../../css/fullpackstyling.css">
             <content>
-                <VBox fx:id="pnItems" prefHeight="321.0" prefWidth="830.0" spacing="5.0" style="-fx-background-color: #131022;">
+                <VBox fx:id="pnItems" prefHeight="518.0" prefWidth="855.0" spacing="5.0" style="-fx-background-color: #131022;">
                     <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </VBox>
             </content>
         </ScrollPane>
-        <TextField fx:id="inputText" layoutX="564.0" layoutY="465.0" prefHeight="40" prefWidth="70" promptText="Enter Id" styleClass="inputid" />
-        <Button fx:id="btnEdit" alignment="CENTER" graphicTextGap="22.0" layoutX="646.0" layoutY="464.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100" styleClass="button5" stylesheets="@../../css/fullpackstyling.css" text="Edit" textFill="#fefe">
+        <TextField fx:id="inputText" layoutX="580.0" layoutY="691.0" prefHeight="40" prefWidth="70" promptText="Enter Id" styleClass="inputid" />
+        <Button fx:id="btnEdit" alignment="CENTER" graphicTextGap="22.0" layoutX="662.0" layoutY="690.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100" styleClass="button5" stylesheets="@../../css/fullpackstyling.css" text="Edit" textFill="#fefe">
         </Button>
-        <Button fx:id="btnDelete" alignment="CENTER" graphicTextGap="22.0" layoutX="753.0" layoutY="464.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100" styleClass="button6" stylesheets="@../../css/fullpackstyling.css" text="Delete" textFill="#fefe">
+        <Button fx:id="btnDelete" alignment="CENTER" graphicTextGap="22.0" layoutX="769.0" layoutY="690.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100" styleClass="button6" stylesheets="@../../css/fullpackstyling.css" text="Delete" textFill="#fefe">
         </Button>
 
     </children>
 </AnchorPane>
+ 

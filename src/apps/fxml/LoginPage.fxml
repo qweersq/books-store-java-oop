@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" maxHeight="550.0" maxWidth="1000.0" minHeight="550.0" minWidth="575.0" prefHeight="550.0" prefWidth="1000.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.LoginController">
+<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="800.0" prefWidth="1000" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.LoginController">
    <children>
       <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#fff600">
          <font>

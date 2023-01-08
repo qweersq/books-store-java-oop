@@ -9,9 +9,9 @@
 
 <AnchorPane fx:id="pnlMain" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.SidebarController">
    <children>
-      <AnchorPane prefHeight="550.0" prefWidth="1000.0" style="-fx-background-color: #030307; -fx-background-radius: 15;">
+      <AnchorPane prefWidth="1000.0" style="-fx-background-color: #030307; -fx-background-radius: 15;">
          <children>
-            <VBox prefHeight="544.0" prefWidth="74.0" style="-fx-background-color: #131022; -fx-background-radius: 15 0 0 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox prefHeight="800.0" prefWidth="74.0" style="-fx-background-color: #131022; -fx-background-radius: 15 0 0 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Pane prefHeight="79.0" prefWidth="74.0" style="-fx-background-radius: 15 0 15 15;" />
                   <Button fx:id="btnDashboard" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@../../css/fullpackstyling.css" text="Dashboard" textFill="#a868a0">

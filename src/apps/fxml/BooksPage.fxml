@@ -17,7 +17,7 @@
 <?import javafx.scene.control.TextField?>
 
 
-<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="551.0" prefWidth="886.0"
+<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="886.0" prefWidth="886.0"
    style="-fx-background-color: #131022; -fx-background-radius: 10;"
    stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1"
    fx:controller="apps.controller.BookListController">

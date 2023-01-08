@@ -17,6 +17,8 @@ import javafx.scene.control.Label;
 import javafx.scene.Node;
 
 import apps.object.ArrayListData;
+import apps.object.ArrayListTrans;
+import apps.object.ArrayListUser;
 
 public class CustomerPageController implements Initializable {
 
@@ -74,7 +76,19 @@ public class CustomerPageController implements Initializable {
     @FXML
     private Label bookPrice;
 
+    @FXML
+    private Label greetings;
+
+    public static String greeting;
+
+    public static int idCustomer;
+
+    // public static void setGreeting(int index) {
+    //     CustomerPageController.greeting = "Hello, " + ArrayListUser.getUsername(index) + "!";
+    // }
+
     public void initialize(URL location, ResourceBundle resources) {
+        greetings.setText(greeting);
         Node[] nodes = new Node[1000];
         for (int i = 0; i < ArrayListData.getSize(); i++) {
             try {
@@ -120,6 +134,21 @@ public class CustomerPageController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         if (event.getSource() == btnPayment) {
             try {
+                ArrayListTrans.addTrans(ArrayListUser.getUsername(idCustomer), txtAuthor.getText(), txtTitle.getText(), Integer.parseInt(txtPrice.getText()), Integer.parseInt(txtQty.getText()), Integer.parseInt(txtAmount.getText()));
+
+                int bookId = Integer.parseInt(txtId.getText());
+                ArrayListData.setStock(bookId, ArrayListData.getStock(bookId) - Integer.parseInt(txtQty.getText()));
+
+                StrukPageController.idBook = Integer.parseInt(txtId.getText());
+                StrukPageController.titleBook = txtTitle.getText();
+                StrukPageController.authorBook = txtAuthor.getText();
+                StrukPageController.priceBook = Integer.parseInt(txtPrice.getText());
+                StrukPageController.qtyBook = Integer.parseInt(txtQty.getText());
+                StrukPageController.amountBook = Integer.parseInt(txtAmount.getText());
+
+                System.out.println("Transaction Success!");
+                ArrayListTrans.showTrans();
+
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("../fxml/StrukPage.fxml"));
                 Parent root = loader.load();

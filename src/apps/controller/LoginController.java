@@ -70,6 +70,8 @@ public class LoginController implements Initializable {
                     }
                 } else if (ArrayListUser.getRole(index).equals("customer")) {
                     try {
+                        CustomerPageController.greeting = "Hello, " + ArrayListUser.getUsername(index) + "! " + "Welcome to our shop";
+                        CustomerPageController.idCustomer = index;
                         FXMLLoader loader = new FXMLLoader();
                         loader.setLocation(getClass().getResource("../fxml/CustomerPage.fxml"));
                         Parent root = loader.load();

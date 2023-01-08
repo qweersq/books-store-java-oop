@@ -25,13 +25,19 @@
             <Font size="26.0" />
          </font>
       </Label>
+      
+      <Label fx:id="greetings" layoutX="36.0" layoutY="104.0" text="Hello " textFill="WHITE">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
 
       <Button fx:id="btnLogout" alignment="CENTER" graphicTextGap="22.0" layoutX="830" layoutY="25.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="100" styleClass="btnLogout" stylesheets="@../../css/fullpackstyling.css" text="Logout" textFill="#fefe">
       </Button>
-      <Button fx:id="btnPayment" alignment="CENTER" graphicTextGap="22.0" layoutX="585.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="388.0" style="-fx-background-color: #418f1e;" styleClass="button4" stylesheets="@../../css/fullpackstyling.css" text="Pay" textFill="#ffffffed">
+      <Button fx:id="btnPayment" alignment="CENTER" graphicTextGap="22.0" layoutX="585.0" layoutY="510.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="388.0" style="-fx-background-color: #418f1e;" styleClass="button4" stylesheets="@../../css/fullpackstyling.css" text="Pay" textFill="#ffffffed">
       </Button>
 
-      <GridPane layoutX="36.0" layoutY="106.0" prefHeight="339.0" prefWidth="479.0">
+      <GridPane layoutX="36.0" layoutY="100.0" prefHeight="339.0" prefWidth="479.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
          </columnConstraints>
@@ -49,11 +55,11 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <ComboBox fx:id="cmbCategory" blendMode="SRC_ATOP" prefHeight="27.0" prefWidth="189.0" promptText="Category" style="-fx-border-color: #fff600; -fx-color: blue;" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647">
+                  <!-- <ComboBox fx:id="cmbCategory" blendMode="SRC_ATOP" prefHeight="27.0" prefWidth="189.0" promptText="Category" style="-fx-border-color: #fff600; -fx-color: blue;" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647">
                      <GridPane.margin>
                         <Insets left="10.0" right="50.0" />
                      </GridPane.margin>
-                  </ComboBox>
+                  </ComboBox> -->
                </children>
             </GridPane>
             <GridPane prefHeight="32.0" prefWidth="474.0" GridPane.rowIndex="1">
@@ -71,14 +77,14 @@
                   <Label text="Id" textFill="#e7e5e5" />
                   <Label text="Title" textFill="#e7e5e5" GridPane.columnIndex="1" />
                   <Label text="Price" textFill="#e7e5e5" GridPane.columnIndex="4" />
-                  <Label text="Quantity" textFill="#e7e5e5" GridPane.columnIndex="3" />
+                  <Label text="Stock" textFill="#e7e5e5" GridPane.columnIndex="3" />
                   <Label text="Author" textFill="#e7e5e5" GridPane.columnIndex="2" />
                </children>
             </GridPane>
             
          </children>
       </GridPane>
-      <ScrollPane layoutX="30.0" layoutY="200.0" prefHeight="320.0" prefWidth="530.0" stylesheets="@../../css/fullpackstyling.css">
+      <ScrollPane layoutX="20.0" layoutY="200.0" prefHeight="520.0" prefWidth="530.0" stylesheets="@../../css/fullpackstyling.css">
          <content>
             <VBox fx:id="pnItemsBook" prefHeight="418" prefWidth="530.0" spacing="5.0" style="-fx-background-color: #131022;">
                <padding>
@@ -87,7 +93,7 @@
             </VBox>
          </content>
       </ScrollPane>
-      <GridPane layoutX="585.0" layoutY="140.0" prefHeight="270.0" prefWidth="388.0">
+      <GridPane layoutX="585.0" layoutY="215.0" prefHeight="270.0" prefWidth="388.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
          </columnConstraints>
@@ -106,11 +112,11 @@
          </children>
 
       </GridPane>
-      <TextField fx:id="txtId" layoutX="585.0" layoutY="150" prefHeight="30.0" prefWidth="130.0" promptText="ID" />
-      <TextField fx:id="txtQty" layoutX="720.0" layoutY="150" prefHeight="30.0" prefWidth="130.0" promptText="Quantity" />
-      <Button fx:id="btnId" alignment="CENTER" graphicTextGap="22.0" layoutX="870" layoutY="151.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="100" styleClass="btnLogout" stylesheets="@../../css/fullpackstyling.css" text="Check Book" textFill="#fefe">
+      <TextField fx:id="txtId" layoutX="585.0" layoutY="210" prefHeight="30.0" prefWidth="130.0" promptText="ID" />
+      <TextField fx:id="txtQty" layoutX="720.0" layoutY="210" prefHeight="30.0" prefWidth="130.0" promptText="Quantity" />
+      <Button fx:id="btnId" alignment="CENTER" graphicTextGap="22.0" layoutX="870" layoutY="211.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="100" styleClass="btnLogout" stylesheets="@../../css/fullpackstyling.css" text="Check Book" textFill="#fefe">
       </Button>
-      <Label layoutX="714.0" layoutY="87.0" text="Order Book" textFill="#fff600">
+      <Label layoutX="714.0" layoutY="120.0" text="Order Book" textFill="#fff600">
          <font>
             <Font size="26.0" />
          </font>

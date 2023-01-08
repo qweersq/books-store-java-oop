@@ -10,7 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="520.0" prefWidth="845.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="apps.controller.BookListController">
+
+<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="770.0" prefWidth="886.0"
+   style="-fx-background-color: #131022; -fx-background-radius: 10;"
+   stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1"
+   fx:controller="apps.controller.BookListController">
    <children>
       <Label layoutX="36.0" layoutY="34.0" text="BOOK" textFill="#fff600">
          <font>
@@ -56,9 +60,11 @@
             </Label>
          </children>
       </HBox>
-      <ScrollPane layoutX="14.0" layoutY="152.0" prefHeight="291.0" prefWidth="818.0" stylesheets="@../../css/fullpackstyling.css">
+      <ScrollPane layoutX="14.0" layoutY="152.0" prefHeight="520.0" prefWidth="846.0"
+         stylesheets="@../../css/fullpackstyling.css">
          <content>
-            <VBox fx:id="pnItemsBook" prefHeight="289.0" prefWidth="817.0" spacing="5.0" style="-fx-background-color: #131022;">
+            <VBox fx:id="pnItemsBook" prefHeight="518" prefWidth="844.0" spacing="5.0"
+               style="-fx-background-color: #131022;">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
@@ -67,10 +73,15 @@
       </ScrollPane>
       <Button fx:id="btnCreate" alignment="CENTER" graphicTextGap="22.0" layoutX="730" layoutY="35.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="100" styleClass="button5" stylesheets="@../../css/fullpackstyling.css" text="Create" textFill="#fefe">
       </Button>
-      <TextField fx:id="fieldId" layoutX="525.0" layoutY="450.0" prefHeight="40.0" prefWidth="70" promptText="Enter Id" styleClass="inputid" />
-      <Button fx:id="btnEdit" alignment="CENTER" graphicTextGap="22.0" layoutX="605.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="100" styleClass="button5" stylesheets="@../../css/fullpackstyling.css" text="Edit" textFill="#fefe">
+      <TextField fx:id="fieldId" styleClass="inputid" prefWidth="70" prefHeight="42" layoutX="520"
+         layoutY="700.0" promptText="Enter Id" />
+      <Button fx:id="btnEdit" onAction="#handleButtonAction"  layoutX="620" layoutY="700.0" alignment="CENTER"
+         styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0"
+         prefWidth="100" textFill="#fefe" stylesheets="@../../css/fullpackstyling.css" text="Edit">
       </Button>
-      <Button fx:id="btnDelete" alignment="CENTER" graphicTextGap="22.0" layoutX="720.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="100" styleClass="button6" stylesheets="@../../css/fullpackstyling.css" text="Hapus" textFill="#fefe">
+      <Button fx:id="btnDelete" onAction="#handleButtonAction" layoutX="750" layoutY="700.0" alignment="CENTER"
+         styleClass="button5" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0"
+         prefWidth="100" textFill="#fefe" stylesheets="@../../css/fullpackstyling.css" text="Hapus">
       </Button>
    </children>
 </AnchorPane>

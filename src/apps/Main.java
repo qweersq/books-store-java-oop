@@ -29,6 +29,9 @@ public class Main extends Application {
         ArrayListData.addBook("The Kite Runner", "Khaled Hosseini", "Novel", 10, 10000);
         ArrayListData.addBook("The Book Thief", "Markus Zusak", "Novel", 10, 10000);
         ArrayListData.addBook("The Fault in Our Stars", "John Green", "Novel", 10, 10000);
+        ArrayListData.addBook("The Fault Stars", "John Green", "Novel", 10, 10000);
+        ArrayListData.addBook("The Runner", "Khaled Hosseini", "Novel", 10, 10000);
+
     }
 
     @Override
