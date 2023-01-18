@@ -20,14 +20,14 @@ javafx.scene.layout.RowConstraints?>
 <AnchorPane fx:id="pnlMain" layoutX="0" layoutY="0" prefHeight="800.0" prefWidth="1000.0"
     style="-fx-background-color: #131022; -fx-background-radius: 10;"
     stylesheets="@../../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/19"
-    xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.StrukPageController">
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.StrukEbookPageController">
     <children>
-        <Label layoutX="36.0" layoutY="34.0" text="CBL Book" textFill="#fff600">
+        <Label layoutX="36.0" layoutY="34.0" text="CBL Ebook" textFill="#fff600">
             <font>
                 <Font size="26.0" />
             </font>
         </Label>
-        <Label layoutX="156.0" layoutY="34.0" text="Store" textFill="#fff">
+        <Label layoutX="165.0" layoutY="34.0" text="Store" textFill="#fff">
             <font>
                 <Font size="26.0" />
             </font>
@@ -37,7 +37,7 @@ javafx.scene.layout.RowConstraints?>
                 <Font size="26.0" />
             </font>
         </Label>
-        <Label layoutX="36.0" layoutY="400.0" text="Thank you for purchasing a book from our store! " textFill="#fff">
+        <Label layoutX="36.0" layoutY="400.0" text="Thank you for purchasing a e-book from our store! " textFill="#fff">
             <font>
                 <Font size="16.0" />
             </font>
@@ -53,7 +53,7 @@ javafx.scene.layout.RowConstraints?>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label layoutX="70.0" layoutY="240.0" text="Book Tilte" textFill="#fff">
+        <Label layoutX="70.0" layoutY="240.0" text="Ebook Title" textFill="#fff">
             <font>
                 <Font size="16.0" />
             </font>
@@ -63,32 +63,32 @@ javafx.scene.layout.RowConstraints?>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label layoutX="70.0" layoutY="270.0" text="Quantity" textFill="#fff">
+        <Label layoutX="70.0" layoutY="270.0" text="Price" textFill="#fff">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblQty" layoutX="300.0" layoutY="270.0" text=":  3" textFill="#fff">
+        <Label fx:id="lblPrice" layoutX="300.0" layoutY="270.0" text=":  3" textFill="#fff">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label layoutX="70.0" layoutY="300.0" text="Price" textFill="#fff">
+        <Label layoutX="70.0" layoutY="300.0" text="Size" textFill="#fff">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblPrice" layoutX="300.0" layoutY="300.0" text=":  10000" textFill="#fff">
+        <Label fx:id="lblSize" layoutX="300.0" layoutY="300.0" text=":  10000" textFill="#fff">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label layoutX="70.0" layoutY="330.0" text="Amount" textFill="#fff">
+        <Label layoutX="70.0" layoutY="330.0" text="Format" textFill="#fff">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblAmount" layoutX="300.0" layoutY="330.0" text=":  30000" textFill="#fff">
+        <Label fx:id="lblFormat" layoutX="300.0" layoutY="330.0" text=":  30000" textFill="#fff">
             <font>
                 <Font size="16.0" />
             </font>

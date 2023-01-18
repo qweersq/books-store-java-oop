@@ -14,14 +14,14 @@
 <AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="770.0" prefWidth="886.0"
    style="-fx-background-color: #131022; -fx-background-radius: 10;"
    stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1"
-   fx:controller="apps.controller.BookListController">
+   fx:controller="apps.controller.EbookListController">
    <children>
-      <Label layoutX="36.0" layoutY="34.0" text="BOOK" textFill="#1abc9c">
+      <Label layoutX="36.0" layoutY="34.0" text="E-BOOK" textFill="#1abc9c">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <Label layoutX="115.0" layoutY="34.0" text="List" textFill="WHITE">
+      <Label layoutX="145.0" layoutY="34.0" text="List" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>
@@ -38,17 +38,17 @@
                   <Insets right="130" />
                </HBox.margin>
             </Label>
-            <Label layoutX="100" text="Author" textFill="#e7e5e5">
+            <Label layoutX="100" text="Category" textFill="#e7e5e5">
                <HBox.margin>
                   <Insets right="30" />
                </HBox.margin>
             </Label>
-            <Label text="Category" textFill="#e7e5e5">
+            <Label text="Format" textFill="#e7e5e5">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Label>
-            <Label text="Stock" textFill="#e7e5e5">
+            <Label text="Size" textFill="#e7e5e5">
                <HBox.margin>
                   <Insets />
                </HBox.margin>

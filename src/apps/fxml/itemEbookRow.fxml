@@ -13,33 +13,32 @@
     style="-fx-background-color: #02030A; -fx-background-radius: 5; -fx-background-insets: 0;"
     xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label fx:id="idBook" prefWidth="20" text="1" textFill="#b7c3d7">
+        <Label fx:id="idEbook" prefWidth="20" text="1" textFill="#b7c3d7">
             <HBox.margin>
                 <Insets left="10.0" right="70" />
             </HBox.margin>
         </Label>
-
-        <Label fx:id="bookTitle" prefWidth="230" text="#" textFill="#b7c3d7">
+        <Label fx:id="ebookTitle" prefWidth="230" text="#" textFill="#b7c3d7">
             <HBox.margin>
                 <Insets />
             </HBox.margin>
         </Label>
-        <Label fx:id="bookAuthor" prefWidth="150" text="#" textFill="#b7c3d7">
+        <Label fx:id="ebookCategory" prefWidth="150" text="#" textFill="#b7c3d7">
             <HBox.margin>
                 <Insets />
             </HBox.margin>
         </Label>
-        <Label fx:id="bookCategory" prefWidth="130" text="#" textFill="#b7c3d7">
+        <Label fx:id="ebookFormat" prefWidth="130" text="#" textFill="#b7c3d7">
             <HBox.margin>
                 <Insets />
             </HBox.margin>
         </Label>
-        <Label fx:id="bookStock" prefWidth="90" text="#" textFill="#b7c3d7">
+        <Label fx:id="ebookSize" prefWidth="90" text="#" textFill="#b7c3d7">
             <HBox.margin>
                 <Insets />
             </HBox.margin>
         </Label>
-        <Label fx:id="bookPrice" text="300.000" textFill="#b7c3d7">
+        <Label fx:id="ebookPrice" text="300.000" textFill="#b7c3d7">
             <HBox.margin>
                 <Insets />
             </HBox.margin>

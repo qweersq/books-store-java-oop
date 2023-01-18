@@ -1,18 +1,14 @@
 package apps.object;
 
-public class Transaction<A, B, C, D, E, F> {
+public class Transaction<A, B, C, D> {
     A name;
-    B author;
-    C title;
-    D price;
-    E amount;
-    F qty;
+    B idBook;
+    C qty;
+    D amount;
 
-    public Transaction(A name, B author, C title, D price, E amount, F qty) {
+    public Transaction(A name, B idBook, C qty, D amount) {
         this.name = name;
-        this.author = author;
-        this.title = title;
-        this.price = price;
+        this.idBook = idBook;
         this.amount = amount;
         this.qty = qty;
     }
@@ -22,24 +18,32 @@ public class Transaction<A, B, C, D, E, F> {
         return name;
     }
 
-    public B getAuthor() {
-        return author;
+    public B getIdBook() {
+        return idBook;
     }
 
-    public C getTitle() {
-        return title;
+    public C getQty() {
+        return qty;
     }
-
-    public D getPrice() {
-        return price;
-    }
-
-    public E getAmount() {
+    
+    public D getAmount() {
         return amount;
     }
 
-    public F getQty() {
-        return qty;
+    //setter
+    public void setName(A name) {
+        this.name = name;
     }
 
+    public void setIdBook(B idBook) {
+        this.idBook = idBook;
+    }
+
+    public void setQty(C qty) {
+        this.qty = qty;
+    }
+
+    public void setAmount(D amount) {
+        this.amount = amount;
+    }
 }

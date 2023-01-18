@@ -4,14 +4,12 @@ public class Book<T> {
   private String title;
   private String author;
   private T category;
-  private int stock;
   private int price;
 
-  public Book(String title, String author, T category, int stock, int price) {
+  public Book(String title, String author, T category, int price) {
     this.title = title;
     this.author = author;
     this.category = category;
-    this.stock = stock;
     this.price = price;
   }
 
@@ -37,14 +35,6 @@ public class Book<T> {
 
   public void setCategory(T category) {
     this.category = category;
-  }
-
-  public int getStock() {
-    return stock;
-  }
-
-  public void setStock(int stock) {
-    this.stock = stock;
   }
 
   public int getPrice() {

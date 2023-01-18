@@ -13,33 +13,33 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pnlMain" layoutX="0" layoutY="0"  minHeight="550.0" minWidth="1000.0" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.CustomerPageController">
+<AnchorPane fx:id="pnlMain" layoutX="0" layoutY="0" minHeight="550.0" minWidth="1000.0" prefHeight="800.0" prefWidth="1000" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.controller.CustomerEbookPageController">
    <children>
-      <!-- <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#fff600">
+      <!-- <Label layoutX="36.0" layoutY="34.0" text="CBL E-BOOK" textFill="#fff600">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <Label layoutX="170.0" layoutY="34.0" text="Store" textFill="WHITE">
+      <Label layoutX="190.0" layoutY="34.0" text="Store" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>
       </Label> -->
       <Label layoutX="36.0" layoutY="115.0" text="Choose Product : " textFill="WHITE">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-   
-      <Label fx:id="greetings" layoutX="36.0" layoutY="34.0" text="Hello " textFill="#fff600">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Label>
+        <font>
+           <Font size="16.0" />
+        </font>
+     </Label>
+      
+     <Label fx:id="greetings" layoutX="36.0" layoutY="34.0" text="Hello " textFill="#fff600">
+        <font>
+           <Font size="26.0" />
+        </font>
+     </Label>
 
       <Button fx:id="btnLogout" alignment="CENTER" graphicTextGap="22.0" layoutX="830" layoutY="25.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="100" styleClass="btnLogout" stylesheets="@../../css/fullpackstyling.css" text="Logout" textFill="#fefe">
       </Button>
-      <Button fx:id="btnPayment" alignment="CENTER" graphicTextGap="22.0" layoutX="585.0" layoutY="510.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="388.0" style="-fx-background-color: #418f1e;" styleClass="button4" stylesheets="@../../css/fullpackstyling.css" text="Pay" textFill="#ffffffed">
+      <Button fx:id="btnPayment" alignment="CENTER" graphicTextGap="22.0" layoutX="585.0" layoutY="510.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="42.0" prefWidth="388.0" styleClass="buttonCat" stylesheets="@../../css/fullpackstyling.css" text="Pay" textFill="#ffffffed">
       </Button>
 
       <GridPane layoutX="36.0" layoutY="100.0" prefHeight="339.0" prefWidth="479.0">
@@ -69,10 +69,10 @@
             </GridPane>
             <GridPane prefHeight="32.0" prefWidth="474.0" GridPane.rowIndex="1">
                <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
                   <ColumnConstraints />
                </columnConstraints>
                <rowConstraints>
@@ -81,9 +81,9 @@
                <children>
                   <Label text="Id" textFill="#e7e5e5" />
                   <Label text="Title" textFill="#e7e5e5" GridPane.columnIndex="1" />
-                  <Label text="Price" textFill="#e7e5e5" GridPane.columnIndex="4" />
-                  <Label text="Stock" textFill="#e7e5e5" GridPane.columnIndex="3" />
-                  <Label text="Author" textFill="#e7e5e5" GridPane.columnIndex="2" />
+                  <Label text="Price" textFill="#e7e5e5" GridPane.columnIndex="2" />
+                  <Label text="Format" textFill="#e7e5e5" GridPane.columnIndex="3" />
+                  <Label text="Size" textFill="#e7e5e5" GridPane.columnIndex="4" />
                </children>
             </GridPane>
             
@@ -91,7 +91,7 @@
       </GridPane>
       <ScrollPane layoutX="20.0" layoutY="200.0" prefHeight="520.0" prefWidth="530.0" stylesheets="@../../css/fullpackstyling.css">
          <content>
-            <VBox fx:id="pnItemsBook" prefHeight="418" prefWidth="530.0" spacing="5.0" style="-fx-background-color: #131022;">
+            <VBox fx:id="pnItemsBook" prefHeight="518" prefWidth="530.0" spacing="5.0" style="-fx-background-color: #131022;">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
@@ -109,29 +109,27 @@
             <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
          </rowConstraints>
+
          <children>
             <TextField fx:id="txtTitle" editable="false" promptText="Title" GridPane.rowIndex="1" />
-            <TextField fx:id="txtAuthor" editable="false" promptText="Author" GridPane.rowIndex="2" />
-            <TextField fx:id="txtPrice" editable="false" promptText="Price" GridPane.rowIndex="3" />
-            <TextField fx:id="txtAmount" editable="false" promptText="Amount" GridPane.rowIndex="4" />
+            <TextField fx:id="txtPrice" editable="false" promptText="Price" GridPane.rowIndex="2" />
+            <TextField fx:id="txtFormat" editable="false" promptText="Format" GridPane.rowIndex="3" />
+            <TextField fx:id="txtSize" editable="false" promptText="Size" GridPane.rowIndex="4" />
          </children>
 
       </GridPane>
-      <TextField fx:id="txtId" layoutX="585.0" layoutY="210" prefHeight="30.0" prefWidth="130.0" promptText="ID" />
-      <TextField fx:id="txtQty" layoutX="720.0" layoutY="210" prefHeight="30.0" prefWidth="130.0" promptText="Quantity" />
+      <TextField fx:id="txtId" layoutX="585.0" layoutY="210" prefHeight="30.0" prefWidth="250.0" promptText="ID" />
       <Button fx:id="btnId" alignment="CENTER" graphicTextGap="22.0" layoutX="870" layoutY="211.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="100" styleClass="btnLogout" stylesheets="@../../css/fullpackstyling.css" text="Check Book" textFill="#fefe">
       </Button>
-      <Button fx:id="btnBook" style="-fx-background-color : #2a2a2a" alignment="CENTER" graphicTextGap="22.0" layoutX="170" layoutY="111.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="100" styleClass="buttonCat" stylesheets="@../../css/fullpackstyling.css" text="Book" textFill="#fefe">
-      </Button>
-      <Button fx:id="btnEbook" alignment="CENTER" graphicTextGap="22.0" layoutX="280" layoutY="111.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="100" styleClass="buttonCat" stylesheets="@../../css/fullpackstyling.css" text="E-Book" textFill="#fefe">
-      </Button>
-      
-     
       <Label layoutX="714.0" layoutY="120.0" text="Order Book" textFill="#fff600">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
+      <Button fx:id="btnBook" alignment="CENTER" graphicTextGap="22.0" layoutX="170" layoutY="111.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="100" styleClass="buttonCat" stylesheets="@../../css/fullpackstyling.css" text="Book" textFill="#fefe">
+      </Button>
+      <Button fx:id="btnEbook" alignment="CENTER" graphicTextGap="22.0" layoutX="280" layoutY="111.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="100" styleClass="buttonCat" style="-fx-background-color : #2a2a2a" stylesheets="@../../css/fullpackstyling.css" text="E-Book" textFill="#fefe">
+      </Button>
 
    </children>
 </AnchorPane>

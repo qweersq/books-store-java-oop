@@ -2,17 +2,55 @@
   -fx-background-color: #fff;
   -fx-background-radius: 5;
 }
-.button1 {
-  -fx-background-color: #393351;
-  -fx-background-radius: 30 0 0 30;
+
+.text-field {
+  -fx-background-color: #2c3e50;
+  -fx-border-color: #1abc9c;
+  -fx-border-radius: 10px;
+  -fx-text-fill: white;
+  -fx-prompt-text-fill: #1abc9c;
 }
-.button1:hover {
-  -fx-background-color: #524a7b;
-  -fx-background-radius: 30 0 0 30;
+
+.buttonCat {
+  -fx-background-color: linear-gradient(to top left, #1abc9c, #2a2a2a);
+  -fx-background-radius: 15;
+  -fx-box-shadow: 0px 0px 10px 0px #ffffff;
 }
-.button1:pressed {
-  -fx-background-color: #2f2b43;
-  -fx-background-radius: 30 0 0 30;
+.buttonCat:hover {
+  -fx-background-color: linear-gradient(to top left, #2a2a2a, #1e1e1e);
+  -fx-background-radius: 15;
+}
+.buttonCat:pressed {
+  -fx-background-color: #0d0d0d;
+  -fx-background-radius: 15;
+}
+
+.buttonKiri {
+  -fx-background-color: linear-gradient(to top left, #1abc9c, #2a2a2a);
+  -fx-background-radius: 15;
+  -fx-box-shadow: 0px 0px 10px 0px #ffffff;
+}
+.buttonKiri:hover {
+  -fx-background-color: linear-gradient(to top left, #2a2a2a, #1e1e1e);
+  -fx-background-radius: 15;
+}
+.buttonKiri:pressed {
+  -fx-background-color: #0d0d0d;
+  -fx-background-radius: 15;
+}
+
+.buttonKanan {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 15;
+  -fx-box-shadow: 0px 0px 10px 0px #ffffff;
+}
+.buttonKanan:hover {
+  -fx-background-color: linear-gradient(to top left, #beaaaa, #ffffff);
+  -fx-background-radius: 15;
+}
+.buttonKanan:pressed {
+  -fx-background-color: #0d0d0d;
+  -fx-background-radius: 15;
 }
 
 .button2 {
@@ -41,15 +79,15 @@
 }
 
 .button4 {
-  -fx-background-color: linear-gradient(to top left, #41951c, #d4cee3);
+  -fx-background-color: linear-gradient(to top left, #1abc9c, #d4cee3);
   -fx-background-radius: 30 30 30 30;
 }
 .button4:hover {
-  -fx-background-color: linear-gradient(to top left, #d4cee3, #41951c);
+  -fx-background-color: linear-gradient(to top left, #d4cee3, #1abc9c);
   -fx-background-radius: 30 30 30 30;
 }
 .button4:pressed {
-  -fx-background-color: linear-gradient(to top left, #41951c, #d4cee3);
+  -fx-background-color: linear-gradient(to top left, #1abc9c, #d4cee3);
   -fx-background-radius: 30 30 30 30;
 }
 
@@ -77,7 +115,7 @@
 
 .btnLogout {
   -fx-background-color: #131022;
-  -fx-border-radius: 30;
+  -fx-border-radius: 30px;
   -fx-border-color: #fff;
 }
 .btnLogout:hover {
@@ -90,23 +128,23 @@
 .combo-box {
   -fx-background-color: #141124;
   -fx-border-color: #515658;
-  -fx-border-radius: 30;
+  -fx-border-radius: 20px;
 }
 .combo-box:hover {
   -fx-background-color: #141124;
   -fx-border-color: #ffff;
-  -fx-border-radius: 30;
+  -fx-border-radius: 20px;
 }
 .combo-box:pressed {
   -fx-background-color: #141124;
   -fx-border-color: #ffff;
-  -fx-border-radius: 30;
+  -fx-border-radius: 20px;
 }
 
 .table-view .column-header,
 .table-view .column-header-background .filler {
   -fx-cell-size: 20;
-  -fx-background-color: #2d75e8;
+  -fx-background-color: #524a7b;
 }
 .table-view .column-header .label {
   -fx-text-fill: white;
@@ -138,17 +176,17 @@
 .table-view .scroll-bar:horizontal .track,
 .table-view .scroll-bar:vertical .track {
   -fx-background-color: transparent;
-  -fx-border-color: derive(#2d75e8, 80%);
-  -fx-background-radius: 2em;
-  -fx-border-radius: 2em;
+  -fx-border-color: derive(#524a7b, 80%);
+  -fx-background-radius: 20px;
+  -fx-border-radius: 20px;
 }
 
 /* The main scrollbar **thumb** CSS class which we drag every time (movable) */
 .table-view .scroll-bar:horizontal .thumb,
 .table-view .scroll-bar:vertical .thumb {
-  -fx-background-color: derive(#2d75e8, 90%);
+  -fx-background-color: derive(#524a7b, 90%);
   -fx-background-insets: 2, 0, 0;
-  -fx-background-radius: 2em;
+  -fx-background-radius: 20px;
 }
 
 /* chart properties */
@@ -173,6 +211,8 @@
 
 .scroll-pane {
     -fx-background-color: #02030A;
+    -fx-background-radius: 0em;
+
 }
 
 .scroll-bar:horizontal, .scroll-bar:vertical{
@@ -188,12 +228,13 @@
 .scroll-bar:vertical .track{
     -fx-background-color: transparent;
     -fx-border-color: transparent;
-    -fx-background-radius: 0em;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
 }
 
 .scroll-bar:horizontal .thumb,
 .scroll-bar:vertical .thumb {
-    -fx-background-color: #10165F;
+    -fx-background-color: #524a7b;
     -fx-background-radius: 5em;
 }
 

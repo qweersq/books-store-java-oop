@@ -22,16 +22,16 @@
         <Label fx:id="cusName" prefWidth="160" text="" textFill="#b7c3d7">
             
         </Label>
-        <Label fx:id="bookTitle" prefWidth="190" text="" textFill="#b7c3d7">
+        <Label fx:id="ebookTitle" prefWidth="190" text="" textFill="#b7c3d7">
            
         </Label>
-        <Label fx:id="bookQty" prefWidth="120" text="" textFill="#b7c3d7">
+        <Label fx:id="ebookFormat" prefWidth="120" text="" textFill="#b7c3d7">
            
         </Label>
-        <Label fx:id="bookPrice" prefWidth="110" text="" textFill="#b7c3d7">
+        <Label fx:id="ebookSize" prefWidth="110" text="" textFill="#b7c3d7">
            
         </Label>
-        <Label fx:id="bookAmount" text="" textFill="#b7c3d7">
+        <Label fx:id="ebookPrice" text="" textFill="#b7c3d7">
          
         </Label>
 

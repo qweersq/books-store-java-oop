@@ -23,6 +23,9 @@ public class SidebarController implements Initializable {
     private Button btnLogout;
 
     @FXML
+    private Button btnEbooks;
+
+    @FXML
     private Pane pnlDashboard;
 
     @FXML
@@ -74,6 +77,18 @@ public class SidebarController implements Initializable {
                 Parent root = loader.load();
                 pnlMain.getChildren().setAll(root);
             } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }else if (event.getSource() == btnEbooks) {
+            try {
+                
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("../fxml/EbookList.fxml"));
+                Parent root = loader.load();
+    
+                pnlChange.getChildren().setAll(root);
+            } catch (Exception e) {
+                // TODO: handle exception
                 e.printStackTrace();
             }
         }

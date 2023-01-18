@@ -1,3 +1,4 @@
+
 package apps.controller;
 
 import javafx.event.ActionEvent;
@@ -20,27 +21,30 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class BookListController implements Initializable {
+public class EbookListController implements Initializable {
     @FXML
     private VBox pnItemsBook = null;
-
-    @FXML
-    private Label bookTitle;
 
     @FXML
     private Label idBook;
 
     @FXML
-    private Label bookAuthor;
+    private Label idEbook;
 
     @FXML
-    private Label bookCategory;
+    private Label ebookTitle;
 
     @FXML
-    private Label bookStock;
+    private Label ebookCategory;
 
     @FXML
-    private Label bookPrice;
+    private Label ebookFormat;
+
+    @FXML
+    private Label ebookSize;
+
+    @FXML
+    private Label ebookPrice;
 
     @FXML
     private Button btnEdit;
@@ -52,9 +56,6 @@ public class BookListController implements Initializable {
     private Button btnDelete;
 
     @FXML
-    private Button btnEbooks;
-
-    @FXML
     private AnchorPane pnlChange;
 
     @FXML
@@ -62,10 +63,10 @@ public class BookListController implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {
         Node[] nodes = new Node[1000];
-        for (int i = 0; i < ArrayListData.getSize(); i++) {
+        for (int i = 0; i < ArrayListEbook.getSize(); i++) {
             try {
                 final int j = i;
-                nodes[i] = FXMLLoader.load(getClass().getResource("../fxml/itemBookRow.fxml"));
+                nodes[i] = FXMLLoader.load(getClass().getResource("../fxml/itemEBookRow.fxml"));
 
                 // give the items some effect
                 nodes[i].setOnMouseEntered(event -> {
@@ -76,23 +77,23 @@ public class BookListController implements Initializable {
                 });
 
                 // set the data to the labels
-                idBook = (Label) nodes[i].lookup("#idBook");
-                idBook.setText((i + 1) + "");
+                idEbook = (Label) nodes[i].lookup("#idEbook");
+                idEbook.setText((i + 1) + "");
 
-                bookTitle = (Label) nodes[i].lookup("#bookTitle");
-                bookTitle.setText(ArrayListData.getTitle(i));
+                ebookTitle = (Label) nodes[i].lookup("#ebookTitle");
+                ebookTitle.setText(ArrayListEbook.getTitle(i));
 
-                bookAuthor = (Label) nodes[i].lookup("#bookAuthor");
-                bookAuthor.setText(ArrayListData.getAuthor(i));
+                ebookCategory = (Label) nodes[i].lookup("#ebookCategory");
+                ebookCategory.setText(ArrayListEbook.getCategory(i));
 
-                bookCategory = (Label) nodes[i].lookup("#bookCategory");
-                bookCategory.setText(ArrayListData.getCategory(i));
+                ebookFormat = (Label) nodes[i].lookup("#ebookFormat");
+                ebookFormat.setText(ArrayListEbook.getFormat(i) + " Mb");
 
-                bookStock = (Label) nodes[i].lookup("#bookStock");
-                bookStock.setText(ArrayListData.getStock(i) + "");
+                ebookSize = (Label) nodes[i].lookup("#ebookSize");
+                ebookSize.setText(ArrayListEbook.getSize(i) + "");
 
-                bookPrice = (Label) nodes[i].lookup("#bookPrice");
-                bookPrice.setText(ArrayListData.getPrice(i) + "");
+                ebookPrice = (Label) nodes[i].lookup("#ebookPrice");
+                ebookPrice.setText(ArrayListEbook.getPrice(i) + "");
 
                 pnItemsBook.getChildren().add(nodes[i]);
 
@@ -106,9 +107,9 @@ public class BookListController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         if (event.getSource() == btnEdit) {
             try {
-                EditBookController.idBookEdit = Integer.parseInt(fieldId.getText()) - 1;
+                EditEbookController.idEbookEdit = Integer.parseInt(fieldId.getText()) - 1;
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("../fxml/BookEditor.fxml"));
+                loader.setLocation(getClass().getResource("../fxml/EbookEditor.fxml"));
                 Parent root = loader.load();
 
                 pnlChange.getChildren().setAll(root);
@@ -119,7 +120,7 @@ public class BookListController implements Initializable {
         } else if (event.getSource() == btnCreate) {
             try {
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("../fxml/CreateBook.fxml"));
+                loader.setLocation(getClass().getResource("../fxml/CreateEbook.fxml"));
                 Parent root = loader.load();
 
                 pnlChange.getChildren().setAll(root);
@@ -129,10 +130,10 @@ public class BookListController implements Initializable {
             }
         } else if (event.getSource() == btnDelete) {
             try {
-                ArrayListData.deleteBook(Integer.parseInt(fieldId.getText()) - 1);
+                ArrayListEbook.deleteEbook(Integer.parseInt(fieldId.getText()) - 1);
 
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("../fxml/BookList.fxml"));
+                loader.setLocation(getClass().getResource("../fxml/EbookList.fxml"));
                 Parent root = loader.load();
 
                 pnlChange.getChildren().setAll(root);

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="770.0" prefWidth="886.0"
+   style="-fx-background-color: #131022; -fx-background-radius: 10;"
+   stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1"
+   xmlns="http://javafx.com/javafx/19" fx:controller="apps.controller.EditTransEbookController">
+   <children>
+      <Label layoutX="36.0" layoutY="34.0" text="Transaction" textFill="#fff600">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCancel" onAction="#handleButtonAction" alignment="CENTER"
+         graphicTextGap="22.0" layoutX="721.0"
+         layoutY="442.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100"
+         styleClass="button6" stylesheets="@../../css/fullpackstyling.css" text="Cancel"
+         textFill="#fefe">
+      </Button>
+      <Button fx:id="btnSave" onAction="#handleButtonAction" alignment="CENTER" graphicTextGap="22.0" layoutX="604.0"
+         layoutY="442.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100"
+         styleClass="button5" stylesheets="@../../css/fullpackstyling.css" text="Save"
+         textFill="#fefe">
+      </Button>
+
+
+      <Label layoutX="170.0" layoutY="34.0" text=" Editor" textFill="WHITE">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idTrans" disable="true" layoutX="737.0" layoutY="34.0" prefHeight="42.0"
+         prefWidth="64.0"
+         promptText="ID" style="-fx-background-color: #fff600;">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </TextField>
+      <GridPane layoutX="36.0" layoutY="95.0" prefHeight="344.0" prefWidth="785.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="227.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="477.0" minWidth="0.0" prefWidth="23.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.0" minWidth="10.0" prefWidth="557.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="64.0" minHeight="0.0" prefHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="137.0" minHeight="0.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="137.0" minHeight="0.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="137.0" minHeight="0.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="137.0" minHeight="0.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="137.0" minHeight="0.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="137.0" minHeight="0.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="137.0" minHeight="0.0" prefHeight="61.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <!-- CUSTOMER NAME -->
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtCusName" promptText="Customer Name" GridPane.columnIndex="2" />
+
+            <!-- IDEEBOOK -->
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ID E-EBOOK"
+               GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtIDEdit" promptText="ID Ebook" GridPane.columnIndex="2"
+               GridPane.rowIndex="1" />
+
+            <!-- QUANTITY -->
+            <!-- <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity"
+               GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtQtyEdit" promptText="Quantity" GridPane.columnIndex="2"
+               GridPane.rowIndex="2" /> -->
+
+            <!-- Button CheckEbook -->
+            <Button fx:id="btnCheckEbook" onAction="#handleButtonAction" layoutX="400.0"
+               layoutY="225.0" GridPane.rowIndex="3" GridPane.columnIndex="2"
+               alignment="CENTER" graphicTextGap="22.0" prefHeight="30.0"
+               prefWidth="150"
+               styleClass="btnLogout" stylesheets="@../../css/fullpackstyling.css"
+               text="Update Ebook Data"
+               textFill="#fefe">
+            </Button>
+
+            <!-- EBOOK TITLE -->
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ebook Title"
+               GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtEbookTitle" editable="false" promptText="Ebook Title"
+               GridPane.columnIndex="2"
+               GridPane.rowIndex="4" />
+
+            <!-- EBOOK Format -->
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Format"
+               GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtFormatEdit" editable="false" promptText="Format"
+               GridPane.columnIndex="2"
+               GridPane.rowIndex="5" />
+
+            <!-- EBOOK Size -->
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Size"
+               GridPane.rowIndex="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtSizeEdit" editable="false" promptText="Size"
+               GridPane.columnIndex="2"
+               GridPane.rowIndex="6" />
+
+            <!-- EBOOK Price -->
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Price"
+               GridPane.rowIndex="7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtPriceEdit" editable="false" promptText="Price"
+               GridPane.columnIndex="2"
+               GridPane.rowIndex="7" />
+
+
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=":"
+               GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=":"
+               GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=":"
+               GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=":"
+               GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=":"
+               GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=":"
+               GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

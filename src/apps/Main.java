@@ -1,6 +1,10 @@
 package apps;
 
+import apps.object.ArrayListAudiobook;
 import apps.object.ArrayListData;
+import apps.object.ArrayListEbook;
+import apps.object.ArrayListTrans;
+import apps.object.ArrayListTransEbook;
 import apps.object.ArrayListUser;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +25,15 @@ public class Main extends Application {
         ArrayListUser.addUser("admin", "admin", "admin");
         ArrayListUser.addUser("hadad", "hadad", "customer");
 
+        ArrayListTrans.addTrans("Rifaldi Indrajaya", 1, 3, 30000);
+        ArrayListTrans.addTrans("Hadad Al Akbar", 2, 4, 40000);
+        ArrayListTrans.addTrans("Athailah Adhar", 3, 5, 50000);
+
+        ArrayListTransEbook.addTrans("Noval", 0, 40, "pdf");
+        ArrayListTransEbook.addTrans("Hadad", 1, 50, "epub");
+        ArrayListTransEbook.addTrans("Athailah", 2, 60, "mobi");
+
+
         ArrayListData.addBook("Harry Potter", "J.K. Rowling", "Novel", 10, 10000);
         ArrayListData.addBook("The Lord of the Rings", "J.R.R. Tolkien", "Novel", 10, 10000);
         ArrayListData.addBook("The Hobbit", "J.R.R. Tolkien", "Novel", 10, 10000);
@@ -32,6 +45,16 @@ public class Main extends Application {
         ArrayListData.addBook("The Fault Stars", "John Green", "Novel", 10, 10000);
         ArrayListData.addBook("The Runner", "Khaled Hosseini", "Novel", 10, 10000);
 
+        // ebook
+        ArrayListEbook.addEbook("Harry Potter", "J.K. Rowling", 10000, "pdf", 40);
+        ArrayListEbook.addEbook("The Lord of the Rings", "J.R.R. Tolkien", 11000, "epub", 50);
+        ArrayListEbook.addEbook("The Hobbit", "J.R.R. Tolkien", 12000, "mobi", 60);
+
+        // audiobook
+        ArrayListAudiobook.addAudiobook("Harry Potter", "J.K. Rowling",10000, "M. Farids", 1300);
+        ArrayListAudiobook.addAudiobook("The Lord of the Rings", "J.R.R. Tolkien",11000, "M. Faldi", 1400);
+        ArrayListAudiobook.addAudiobook("The Hobbit", "J.R.R. Tolkien",12000, "M. Athailah", 1500);
+        
     }
 
     @Override

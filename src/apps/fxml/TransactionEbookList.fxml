@@ -10,14 +10,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="770.0" prefWidth="500.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="apps.controller.DashboardController">
+<AnchorPane fx:id="pnlChange" layoutX="0" layoutY="0" prefHeight="770.0" prefWidth="500.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../../css/fullpackstyling.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="apps.controller.TransactionEbookListController">
     <children>
-        <Label layoutX="36.0" layoutY="34.0" text="CBL BOOK" textFill="#1abc9c">
+        <Label layoutX="36.0" layoutY="34.0" text="CBL E-BOOK" textFill="#1abc9c">
             <font>
                 <Font size="26.0" />
             </font>
         </Label>
-        <Label layoutX="170.0" layoutY="34.0" text="Transaction List" textFill="WHITE">
+        <Label layoutX="200.0" layoutY="34.0" text="Transaction List" textFill="WHITE">
             <font>
                 <Font size="26.0" />
             </font>
@@ -34,22 +34,22 @@
                         <Insets right="50" />
                     </HBox.margin>
                 </Label>
-                <Label layoutX="100" text="Book Title" textFill="#e7e5e5">
+                <Label layoutX="100" text="E-Book Title" textFill="#e7e5e5">
                     <HBox.margin>
                         <Insets right="50" />
                     </HBox.margin>
                 </Label>
-                <Label text="Quantity" textFill="#e7e5e5">
+                <Label text="Format" textFill="#e7e5e5">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+                <Label text="Size" textFill="#e7e5e5">
                     <HBox.margin>
                         <Insets />
                     </HBox.margin>
                 </Label>
                 <Label text="Price" textFill="#e7e5e5">
-                    <HBox.margin>
-                        <Insets />
-                    </HBox.margin>
-                </Label>
-                <Label text="Amount" textFill="#e7e5e5">
                     <HBox.margin>
                         <Insets />
                     </HBox.margin>
@@ -65,7 +65,7 @@
                 </VBox>
             </content>
         </ScrollPane>
-        <Button fx:id="btnTransEbook" onAction="#handleButtonAction" alignment="CENTER" graphicTextGap="22.0" layoutX="662.0" layoutY="30.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="200" styleClass="buttonKiri" stylesheets="@../../css/fullpackstyling.css" text="Ebook Transaction" textFill="#fefe">
+        <Button fx:id="btnBook" onAction="#handleButtonAction" alignment="CENTER" graphicTextGap="22.0" layoutX="662.0" layoutY="30.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="200" styleClass="buttonKiri" stylesheets="@../../css/fullpackstyling.css" text="Book Transaction" textFill="#fefe">
         </Button>
         <TextField fx:id="inputId" layoutX="580.0" layoutY="691.0" prefHeight="40" prefWidth="70" promptText="Enter Id" styleClass="inputid" />
         <Button fx:id="btnEdit" onAction="#handleButtonAction" alignment="CENTER" graphicTextGap="22.0" layoutX="662.0" layoutY="690.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100" styleClass="buttonKiri" stylesheets="@../../css/fullpackstyling.css" text="Edit" textFill="#fefe">

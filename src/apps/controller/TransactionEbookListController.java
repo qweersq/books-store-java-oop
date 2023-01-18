@@ -1,3 +1,4 @@
+
 package apps.controller;
 
 import javafx.event.ActionEvent;
@@ -7,8 +8,8 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import apps.object.ArrayListData;
-import apps.object.ArrayListTrans;
+import apps.object.ArrayListEbook;
+import apps.object.ArrayListTransEbook;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.Node;
@@ -20,7 +21,7 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class DashboardController implements Initializable {
+public class TransactionEbookListController implements Initializable {
 
     @FXML
     private VBox pnItems = null;
@@ -32,16 +33,16 @@ public class DashboardController implements Initializable {
     private Label cusName;
 
     @FXML
-    private Label bookTitle;
+    private Label ebookTitle;
 
     @FXML
-    private Label bookQty;
+    private Label ebookFormat;
 
     @FXML
-    private Label bookPrice;
+    private Label ebookPrice;
 
     @FXML
-    private Label bookAmount;
+    private Label ebookSize;
 
     @FXML
     private Button btnEdit;
@@ -50,7 +51,7 @@ public class DashboardController implements Initializable {
     private Button btnDelete;
 
     @FXML
-    private Button btnTransEbook;
+    private Button btnBook;
 
     @FXML
     private TextField inputId;
@@ -58,15 +59,16 @@ public class DashboardController implements Initializable {
     @FXML
     private AnchorPane pnlChange;
 
-    private int idBook;
+    @FXML 
+    private int idEbook;
 
     public void initialize(URL location, ResourceBundle resources) {
        
         Node[] nodes = new Node[1000];
-        for (int i = 0; i < ArrayListTrans.getSize(); i++) {
+        for (int i = 0; i < ArrayListTransEbook.getSize(); i++) {
             try {
                 final int j = i;
-                nodes[i] = FXMLLoader.load(getClass().getResource("../fxml/TransactionList.fxml"));
+                nodes[i] = FXMLLoader.load(getClass().getResource("../fxml/itemEbookTransList.fxml"));
 
                 // give the items some effect
                 nodes[i].setOnMouseEntered(event -> {
@@ -81,23 +83,21 @@ public class DashboardController implements Initializable {
                 idTrans.setText((i + 1) + "");
 
                 cusName = (Label) nodes[i].lookup("#cusName");
-                cusName.setText(ArrayListTrans.getName(i));
+                cusName.setText(ArrayListTransEbook.getName(i));
 
-                idBook = ArrayListTrans.getIdBook(i);
+                idEbook = ArrayListTransEbook.getIdEbook(i);
 
-                System.out.println("IdBook" + idBook);
+                ebookTitle = (Label) nodes[i].lookup("#ebookTitle");
+                ebookTitle.setText(ArrayListEbook.getTitle(idEbook));
 
-                bookTitle = (Label) nodes[i].lookup("#bookTitle");
-                bookTitle.setText(ArrayListData.getTitle(idBook));
+                ebookFormat = (Label) nodes[i].lookup("#ebookFormat");
+                ebookFormat.setText(ArrayListEbook.getFormat(idEbook) + "");
 
-                bookQty = (Label) nodes[i].lookup("#bookQty");
-                bookQty.setText(ArrayListTrans.getQty(i) + "");
+                ebookSize = (Label) nodes[i].lookup("#ebookSize");
+                ebookSize.setText(ArrayListEbook.getSize(idEbook) + " Mb");
 
-                bookPrice = (Label) nodes[i].lookup("#bookPrice");
-                bookPrice.setText(ArrayListData.getPrice(idBook) + "");
-
-                bookAmount = (Label) nodes[i].lookup("#bookAmount");
-                bookAmount.setText(ArrayListTrans.getAmount(i) + "");
+                ebookPrice = (Label) nodes[i].lookup("#ebookPrice");
+                ebookPrice.setText(ArrayListEbook.getPrice(idEbook) + "");
 
                 pnItems.getChildren().add(nodes[i]);
 
@@ -114,9 +114,9 @@ public class DashboardController implements Initializable {
                 int idTransaction = Integer.parseInt(inputId.getText());
                 EditTransController.idTransEdit = idTransaction;
 
-                // EditBookController.idBookEdit = Integer.parseInt(inputId.getText())-1;
+                EditTransEbookController.idTransEdit = Integer.parseInt(inputId.getText());
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("../fxml/TransEditor.fxml"));
+                loader.setLocation(getClass().getResource("../fxml/TransEbookEditor.fxml"));
                 Parent root = loader.load();
     
                 pnlChange.getChildren().setAll(root);
@@ -126,10 +126,10 @@ public class DashboardController implements Initializable {
             }
         } else if (event.getSource() == btnDelete) {
             try {
-                ArrayListTrans.removeTrans(Integer.parseInt(inputId.getText())-1);
+                ArrayListTransEbook.removeTrans(Integer.parseInt(inputId.getText())-1);
                 
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("../fxml/DashboardPage.fxml"));
+                loader.setLocation(getClass().getResource("../fxml/TransactionEbookList.fxml"));
                 Parent root = loader.load();
     
                 pnlChange.getChildren().setAll(root);
@@ -137,10 +137,10 @@ public class DashboardController implements Initializable {
                 // TODO: handle exception
                 e.printStackTrace();
             }
-        } else if (event.getSource() == btnTransEbook) {
+        } else if (event.getSource() == btnBook) {
             try {
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("../fxml/TransactionEbookList.fxml"));
+                loader.setLocation(getClass().getResource("../fxml/DashboardPage.fxml"));
                 Parent root = loader.load();
     
                 pnlChange.getChildren().setAll(root);

@@ -1,4 +1,6 @@
 
+
+
 package apps.controller;
 
 import javafx.event.ActionEvent;
@@ -12,15 +14,20 @@ import javafx.scene.layout.Pane;
 import javafx.scene.Parent;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import apps.object.ArrayListEbook;
+import apps.object.ArrayListTransEbook;
+import apps.object.ArrayListUser;
+
 import java.io.IOException;
 import javafx.scene.control.Label;
 import javafx.scene.Node;
 
-import apps.object.ArrayListData;
-import apps.object.ArrayListTrans;
-import apps.object.ArrayListUser;
+// import apps.object.ArrayListData;
+// import apps.object.ArrayListTrans;
+// import apps.object.ArrayListUser;
 
-public class CustomerPageController implements Initializable {
+public class CustomerEbookPageController implements Initializable {
 
     @FXML
     private Button btnPayment;
@@ -40,8 +47,6 @@ public class CustomerPageController implements Initializable {
     @FXML
     private Button btnAudiobook;
 
-
-
     @FXML
     private AnchorPane pnlMain;
 
@@ -58,13 +63,13 @@ public class CustomerPageController implements Initializable {
     private TextField txtTitle;
 
     @FXML
-    private TextField txtAuthor;
+    private TextField txtFormat;
 
     @FXML
     private TextField txtPrice;
 
     @FXML
-    private TextField txtAmount;
+    private TextField txtSize;
 
     @FXML
     private TextField txtQty;
@@ -73,19 +78,25 @@ public class CustomerPageController implements Initializable {
     private Label idBook;
 
     @FXML
-    private Label bookTitle;
+    private Label ebookTitle;
 
     @FXML
-    private Label bookAuthor;
+    private Label ebookAuthor;
 
     @FXML
-    private Label bookCategory;
+    private Label ebookCategory;
 
     @FXML
-    private Label bookStock;
+    private Label ebookStock;
 
     @FXML
-    private Label bookPrice;
+    private Label ebookPrice;
+
+    @FXML
+    private Label ebookFormat;
+
+    @FXML
+    private Label ebookSize;
 
     @FXML
     private Label greetings;
@@ -94,17 +105,13 @@ public class CustomerPageController implements Initializable {
 
     public static int idCustomer;
 
-    // public static void setGreeting(int index) {
-    //     CustomerPageController.greeting = "Hello, " + ArrayListUser.getUsername(index) + "!";
-    // }
-
     public void initialize(URL location, ResourceBundle resources) {
         greetings.setText(greeting);
         Node[] nodes = new Node[1000];
-        for (int i = 0; i < ArrayListData.getSize(); i++) {
+        for (int i = 0; i < ArrayListEbook.getSize(); i++) {
             try {
                 final int j = i;
-                nodes[i] = FXMLLoader.load(getClass().getResource("../fxml/BookListCustomer.fxml"));
+                nodes[i] = FXMLLoader.load(getClass().getResource("../fxml/EbookListCustomer.fxml"));
 
                 // give the items some effect
                 nodes[i].setOnMouseEntered(event -> {
@@ -115,23 +122,30 @@ public class CustomerPageController implements Initializable {
                 });
 
                 // set the data to the labels
-                idBook = (Label) nodes[i].lookup("#idBook");
+                idBook = (Label) nodes[i].lookup("#idebook");
                 idBook.setText((i + 1) + "");
 
-                bookTitle = (Label) nodes[i].lookup("#bookTitle");
-                bookTitle.setText(ArrayListData.getTitle(i));
+                ebookTitle = (Label) nodes[i].lookup("#ebookTitle");
+                ebookTitle.setText(ArrayListEbook.getTitle(i));
 
-                bookAuthor = (Label) nodes[i].lookup("#bookAuthor");
-                bookAuthor.setText(ArrayListData.getAuthor(i));
+                // ebookAuthor = (Label) nodes[i].lookup("#ebookAuthor");
+                // ebookAuthor.setText(ArrayListEbook.getAuthor(i));
 
-                // bookCategory = (Label) nodes[i].lookup("#bookCategory");
-                // bookCategory.setText(ArrayListData.getCategory(i));
+                // ebookCategory = (Label) nodes[i].lookup("#ebookCategory");
+                // ebookCategory.setText(ArrayListEbook.getCategory(i));
 
-                bookStock = (Label) nodes[i].lookup("#bookStock");
-                bookStock.setText(ArrayListData.getStock(i) + "");
+                // ebookStock = (Label) nodes[i].lookup("#ebookStock");
+                // ebookStock.setText(ArrayListEbook.getStock(i) + "");
 
-                bookPrice = (Label) nodes[i].lookup("#bookPrice");
-                bookPrice.setText(ArrayListData.getPrice(i) + "");
+                ebookPrice = (Label) nodes[i].lookup("#ebookPrice");
+                ebookPrice.setText(ArrayListEbook.getPrice(i) + "");
+
+                ebookFormat = (Label) nodes[i].lookup("#ebookFormat");
+                ebookFormat.setText(ArrayListEbook.getFormat(i));
+
+                ebookSize = (Label) nodes[i].lookup("#ebookSize");
+                ebookSize.setText(ArrayListEbook.getSize(i) + " Mb");
+                
 
                 pnItemsBook.getChildren().add(nodes[i]);
 
@@ -145,20 +159,22 @@ public class CustomerPageController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         if (event.getSource() == btnPayment) {
             try {
-                int bookId = Integer.parseInt(txtId.getText())-1;
-                ArrayListTrans.addTrans(ArrayListUser.getUsername(idCustomer), bookId, Integer.parseInt(txtQty.getText()), Integer.parseInt(txtAmount.getText()));
+                int ebookId = Integer.parseInt(txtId.getText())-1;
 
-                ArrayListData.setStock(bookId, ArrayListData.getStock(bookId) - Integer.parseInt(txtQty.getText()));
+                ArrayListTransEbook.addTrans(ArrayListUser.getUsername(idCustomer), ebookId, Integer.parseInt(txtSize.getText()), txtFormat.getText());
 
-                StrukPageController.idBook = Integer.parseInt(txtId.getText());
-                StrukPageController.titleBook = txtTitle.getText();
-                StrukPageController.authorBook = txtAuthor.getText();
-                StrukPageController.priceBook = Integer.parseInt(txtPrice.getText());
-                StrukPageController.qtyBook = Integer.parseInt(txtQty.getText());
-                StrukPageController.amountBook = Integer.parseInt(txtAmount.getText());
+                System.out.println("Ebook ID" + ebookId);
+
+                StrukEbookPageController.idEbook = Integer.parseInt(txtId.getText());
+                StrukEbookPageController.titleEbook = txtTitle.getText();
+                StrukEbookPageController.formatEbook = txtFormat.getText();
+                StrukEbookPageController.priceEbook = Integer.parseInt(txtPrice.getText());
+                StrukEbookPageController.sizeEbook = Integer.parseInt(txtSize.getText());
+
+                System.out.println("Transaction Success!");
 
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("../fxml/StrukPage.fxml"));
+                loader.setLocation(getClass().getResource("../fxml/StrukEbookPage.fxml"));
                 Parent root = loader.load();
 
                 pnlMain.getChildren().setAll(root);
@@ -179,29 +195,12 @@ public class CustomerPageController implements Initializable {
         } else if (event.getSource() == btnId) {
             try {
                 int id = Integer.parseInt(txtId.getText()) - 1;
+                int price = ArrayListEbook.getPrice(id);
 
-                int qty = Integer.parseInt(txtQty.getText());
-                int price = ArrayListData.getPrice(id);
-                int stock = ArrayListData.getStock(id);
-                int amount = price * qty;
-                System.out.println(amount);
-
-                ArrayListData.setStock(id, stock - qty);
-
-                txtTitle.setText(ArrayListData.getTitle(id));
-                txtAuthor.setText(ArrayListData.getAuthor(id));
+                txtTitle.setText(ArrayListEbook.getTitle(id));
+                txtFormat.setText(ArrayListEbook.getFormat(id));
                 txtPrice.setText(String.valueOf(price));
-                txtAmount.setText(String.valueOf(amount));
-            } catch (Exception e) {
-                // TODO: handle exception
-            }
-        } else if (event.getSource() == btnBook) {
-            try {
-                FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("../fxml/CustomerPage.fxml"));
-                Parent root = loader.load();
-
-                pnlMain.getChildren().setAll(root);
+                txtSize.setText(String.valueOf(ArrayListEbook.getSize(id)));
             } catch (Exception e) {
                 // TODO: handle exception
             }
@@ -215,10 +214,10 @@ public class CustomerPageController implements Initializable {
             } catch (Exception e) {
                 // TODO: handle exception
             }
-        } else if (event.getSource() == btnAudiobook) {
+        } else if (event.getSource() == btnBook) {
             try {
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("../fxml/CustomerAudiobookPage.fxml"));
+                loader.setLocation(getClass().getResource("../fxml/CustomerPage.fxml"));
                 Parent root = loader.load();
 
                 pnlMain.getChildren().setAll(root);
@@ -226,7 +225,6 @@ public class CustomerPageController implements Initializable {
                 // TODO: handle exception
             }
         }
-        
     }
 
 }
